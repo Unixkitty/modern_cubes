@@ -16,6 +16,23 @@ public class ModLanguageProvider extends LanguageProvider
     @Override
     protected void addTranslations()
     {
+        add(ModBlocks.SOFT_PLATE_WHITE.get(), "Soft White Plate");
+        add(ModBlocks.SOFT_PLATE_ORANGE.get(), "Soft Orange Plate");
+        add(ModBlocks.SOFT_PLATE_MAGENTA.get(), "Soft Magenta Plate");
+        add(ModBlocks.SOFT_PLATE_LIGHT_BLUE.get(), "Soft Light Blue Plate");
+        add(ModBlocks.SOFT_PLATE_YELLOW.get(), "Soft Yellow Plate");
+        add(ModBlocks.SOFT_PLATE_LIME.get(), "Soft Lime Plate");
+        add(ModBlocks.SOFT_PLATE_PINK.get(), "Soft Pink Plate");
+        add(ModBlocks.SOFT_PLATE_GRAY.get(), "Soft Gray Plate");
+        add(ModBlocks.SOFT_PLATE_LIGHT_GRAY.get(), "Soft Light Gray Plate");
+        add(ModBlocks.SOFT_PLATE_CYAN.get(), "Soft Cyan Plate");
+        add(ModBlocks.SOFT_PLATE_PURPLE.get(), "Soft Purple Plate");
+        add(ModBlocks.SOFT_PLATE_BLUE.get(), "Soft Blue Plate");
+        add(ModBlocks.SOFT_PLATE_BROWN.get(), "Soft Brown Plate");
+        add(ModBlocks.SOFT_PLATE_GREEN.get(), "Soft Green Plate");
+        add(ModBlocks.SOFT_PLATE_RED.get(), "Soft Red Plate");
+        add(ModBlocks.SOFT_PLATE_BLACK.get(), "Soft Black Plate");
+
         add(ModBlocks.STEEL_DOOR.get(), "Blue Steel Door");
         add(ModBlocks.STRONG_DOOR.get(), "Strong Door");
         add(ModBlocks.STURDY_RUSTY_DOOR.get(), "Sturdy Rusty Door");

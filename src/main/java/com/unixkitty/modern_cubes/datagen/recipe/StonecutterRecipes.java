@@ -23,8 +23,24 @@ public class StonecutterRecipes extends RecipeProvider
     @Override
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer)
     {
-        simple(ModBlocks.BEAM.get(), Items.IRON_INGOT, consumer);
-        simpleUndoable(ModBlocks.BEAM_BOLTS.get(), ModBlocks.BEAM.get(), consumer);
+        category(Items.IRON_BLOCK, consumer,
+                ModBlocks.SOFT_PLATE_WHITE.get(),
+                ModBlocks.SOFT_PLATE_ORANGE.get(),
+                ModBlocks.SOFT_PLATE_MAGENTA.get(),
+                ModBlocks.SOFT_PLATE_LIGHT_BLUE.get(),
+                ModBlocks.SOFT_PLATE_YELLOW.get(),
+                ModBlocks.SOFT_PLATE_LIME.get(),
+                ModBlocks.SOFT_PLATE_PINK.get(),
+                ModBlocks.SOFT_PLATE_GRAY.get(),
+                ModBlocks.SOFT_PLATE_LIGHT_GRAY.get(),
+                ModBlocks.SOFT_PLATE_CYAN.get(),
+                ModBlocks.SOFT_PLATE_PURPLE.get(),
+                ModBlocks.SOFT_PLATE_BLUE.get(),
+                ModBlocks.SOFT_PLATE_BROWN.get(),
+                ModBlocks.SOFT_PLATE_GREEN.get(),
+                ModBlocks.SOFT_PLATE_RED.get(),
+                ModBlocks.SOFT_PLATE_BLACK.get()
+        );
 
         category(Items.IRON_DOOR, consumer,
                 ModBlocks.STEEL_DOOR.get(),
@@ -41,6 +57,9 @@ public class StonecutterRecipes extends RecipeProvider
                 ModBlocks.STURDY_WHITE_STEEL_DOOR_GLASS.get(),
                 ModBlocks.WHITE_STEEL_DOOR_GLASS.get()
         );
+
+        simple(ModBlocks.BEAM.get(), Items.IRON_INGOT, consumer);
+        simpleUndoable(ModBlocks.BEAM_BOLTS.get(), ModBlocks.BEAM.get(), consumer);
     }
 
     //Make things craftable into each other, Chisel-style

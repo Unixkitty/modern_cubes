@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "modern_cubes:soft_plate_blue"
+  },
+  "result": "modern_cubes:soft_plate_brown"
+}

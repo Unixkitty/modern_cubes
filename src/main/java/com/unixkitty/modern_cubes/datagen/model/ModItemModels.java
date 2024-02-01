@@ -19,6 +19,23 @@ public class ModItemModels extends ItemModelProvider
     @Override
     protected void registerModels()
     {
+        copyParent(ModBlocks.SOFT_PLATE_WHITE.get());
+        copyParent(ModBlocks.SOFT_PLATE_ORANGE.get());
+        copyParent(ModBlocks.SOFT_PLATE_MAGENTA.get());
+        copyParent(ModBlocks.SOFT_PLATE_LIGHT_BLUE.get());
+        copyParent(ModBlocks.SOFT_PLATE_YELLOW.get());
+        copyParent(ModBlocks.SOFT_PLATE_LIME.get());
+        copyParent(ModBlocks.SOFT_PLATE_PINK.get());
+        copyParent(ModBlocks.SOFT_PLATE_GRAY.get());
+        copyParent(ModBlocks.SOFT_PLATE_LIGHT_GRAY.get());
+        copyParent(ModBlocks.SOFT_PLATE_CYAN.get());
+        copyParent(ModBlocks.SOFT_PLATE_PURPLE.get());
+        copyParent(ModBlocks.SOFT_PLATE_BLUE.get());
+        copyParent(ModBlocks.SOFT_PLATE_BROWN.get());
+        copyParent(ModBlocks.SOFT_PLATE_GREEN.get());
+        copyParent(ModBlocks.SOFT_PLATE_RED.get());
+        copyParent(ModBlocks.SOFT_PLATE_BLACK.get());
+
         basicItem(ModBlocks.STEEL_DOOR.get().asItem());
         basicItem(ModBlocks.STRONG_DOOR.get().asItem());
         basicItem(ModBlocks.STURDY_RUSTY_DOOR.get().asItem());

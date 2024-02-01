@@ -23,6 +23,23 @@ public class ModBlockStates extends BlockStateProvider
     @Override
     protected void registerStatesAndModels()
     {
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_WHITE.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_ORANGE.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_MAGENTA.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_LIGHT_BLUE.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_YELLOW.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_LIME.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_PINK.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_GRAY.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_LIGHT_GRAY.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_CYAN.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_PURPLE.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_BLUE.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_BROWN.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_GREEN.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_RED.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_BLACK.get(), "");
+
         customDoor((DoorBlock) ModBlocks.STEEL_DOOR.get());
         customDoor((DoorBlock) ModBlocks.STRONG_DOOR.get());
         customDoor((DoorBlock) ModBlocks.STURDY_RUSTY_DOOR.get());
@@ -52,6 +69,11 @@ public class ModBlockStates extends BlockStateProvider
     private void customDoorCutout(DoorBlock block)
     {
         doorBlockWithRenderType(block, extendBlockTexture(blockTexture(block), "_bottom"), extendBlockTexture(blockTexture(block), "_top"), "cutout");
+    }
+
+    private void customAxisBlockSingle(RotatedPillarBlock block, String suffix)
+    {
+        axisBlock(block, blockTexture(block), extendBlockTexture(blockTexture(block), suffix));
     }
 
     private void customAxisBlock(RotatedPillarBlock block)
