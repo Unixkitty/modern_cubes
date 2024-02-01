@@ -16,6 +16,18 @@ public class ModLanguageProvider extends LanguageProvider
     @Override
     protected void addTranslations()
     {
+        add(ModBlocks.SHEETMETAL_ALUMINUM.get(), "Aluminum Sheetmetal");
+        add(ModBlocks.SHEETMETAL_COPPER.get(), "Copper Sheetmetal");
+        add(ModBlocks.SHEETMETAL_GOLD.get(), "Gold Sheetmetal");
+        add(ModBlocks.SHEETMETAL_IRON.get(), "Iron Sheetmetal");
+        add(ModBlocks.SHEETMETAL_LEAD.get(), "Lead Sheetmetal");
+        add(ModBlocks.SHEETMETAL_NICKEL.get(), "Nickel Sheetmetal");
+        add(ModBlocks.SHEETMETAL_SILVER.get(), "Silver Sheetmetal");
+        add(ModBlocks.SHEETMETAL_STEEL.get(), "Steel Sheetmetal");
+        add(ModBlocks.SHEETMETAL_URANIUM.get(), "Uranium Sheetmetal");
+        add(ModBlocks.SHEETMETAL_COPPER_ALT.get(), "Copper Sheetmetal (Alternate)");
+        add(ModBlocks.SHEETMETAL_IRON_ALT.get(), "Iron Sheetmetal (Alternate)");
+
         add(ModBlocks.SOFT_PLATE_WHITE.get(), "Soft White Plate");
         add(ModBlocks.SOFT_PLATE_ORANGE.get(), "Soft Orange Plate");
         add(ModBlocks.SOFT_PLATE_MAGENTA.get(), "Soft Magenta Plate");

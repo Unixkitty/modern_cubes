@@ -24,6 +24,20 @@ public class StonecutterRecipes extends RecipeProvider
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer)
     {
         category(Items.IRON_BLOCK, consumer,
+                ModBlocks.SHEETMETAL_ALUMINUM.get(),
+                ModBlocks.SHEETMETAL_COPPER.get(),
+                ModBlocks.SHEETMETAL_GOLD.get(),
+                ModBlocks.SHEETMETAL_IRON.get(),
+                ModBlocks.SHEETMETAL_LEAD.get(),
+                ModBlocks.SHEETMETAL_NICKEL.get(),
+                ModBlocks.SHEETMETAL_SILVER.get(),
+                ModBlocks.SHEETMETAL_STEEL.get(),
+                ModBlocks.SHEETMETAL_URANIUM.get(),
+                ModBlocks.SHEETMETAL_COPPER_ALT.get(),
+                ModBlocks.SHEETMETAL_IRON_ALT.get()
+        );
+
+        category(Items.IRON_BLOCK, consumer,
                 ModBlocks.SOFT_PLATE_WHITE.get(),
                 ModBlocks.SOFT_PLATE_ORANGE.get(),
                 ModBlocks.SOFT_PLATE_MAGENTA.get(),

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "modern_cubes:block/sheetmetal_lead",
+    "side": "modern_cubes:block/sheetmetal_lead"
+  }
+}

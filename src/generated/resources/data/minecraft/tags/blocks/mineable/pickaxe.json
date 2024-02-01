@@ -1,5 +1,16 @@
 {
   "values": [
+    "modern_cubes:sheetmetal_aluminum",
+    "modern_cubes:sheetmetal_copper",
+    "modern_cubes:sheetmetal_gold",
+    "modern_cubes:sheetmetal_iron",
+    "modern_cubes:sheetmetal_lead",
+    "modern_cubes:sheetmetal_nickel",
+    "modern_cubes:sheetmetal_silver",
+    "modern_cubes:sheetmetal_steel",
+    "modern_cubes:sheetmetal_uranium",
+    "modern_cubes:sheetmetal_copper_alt",
+    "modern_cubes:sheetmetal_iron_alt",
     "modern_cubes:soft_plate_white",
     "modern_cubes:soft_plate_orange",
     "modern_cubes:soft_plate_magenta",
