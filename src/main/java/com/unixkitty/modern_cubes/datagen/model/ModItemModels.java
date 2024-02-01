@@ -19,6 +19,25 @@ public class ModItemModels extends ItemModelProvider
     @Override
     protected void registerModels()
     {
+        copyParent(ModBlocks.CONCRETE_ASPHALT.get());
+        copyParent(ModBlocks.CONCRETE_BURNT.get());
+        copyParent(ModBlocks.CONCRETE_GRAY.get());
+        copyParent(ModBlocks.CONCRETE_HARSH.get());
+        copyParent(ModBlocks.CONCRETE_SIMPLE.get());
+        copyParent(ModBlocks.CONCRETE_SIMPLE_TILE.get());
+
+        copyParent(ModBlocks.CEILING_PLATE.get());
+        copyParent(ModBlocks.CEILING_TILE.get());
+        copyParent(ModBlocks.FLOOR_PLATE.get());
+        copyParent(ModBlocks.FLOOR_PLATE_DARK.get());
+        copyParent(ModBlocks.FLOOR_PLATE_LIGHT.get());
+        copyParent(ModBlocks.PLATING_COPPER.get());
+        copyParent(ModBlocks.PLATING_IRON.get());
+        copyParent(ModBlocks.PLATING_IRON_RUSTED.get());
+        copyParent(ModBlocks.PLATING_LEAD.get());
+        copyParent(ModBlocks.PLATING_STEEL.get());
+        copyParent(ModBlocks.PLATING_TITANIUM_STEEL.get());
+
         copyParent(ModBlocks.SHEETMETAL_ALUMINUM.get());
         copyParent(ModBlocks.SHEETMETAL_COPPER.get());
         copyParent(ModBlocks.SHEETMETAL_GOLD.get());

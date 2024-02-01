@@ -23,6 +23,25 @@ public class ModBlockStates extends BlockStateProvider
     @Override
     protected void registerStatesAndModels()
     {
+        simpleBlock(ModBlocks.CONCRETE_ASPHALT.get());
+        simpleBlock(ModBlocks.CONCRETE_BURNT.get());
+        simpleBlock(ModBlocks.CONCRETE_GRAY.get());
+        simpleBlock(ModBlocks.CONCRETE_HARSH.get());
+        simpleBlock(ModBlocks.CONCRETE_SIMPLE.get());
+        simpleBlock(ModBlocks.CONCRETE_SIMPLE_TILE.get());
+
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.CEILING_PLATE.get(), "");
+        simpleBlock(ModBlocks.CEILING_TILE.get());
+        simpleBlock(ModBlocks.FLOOR_PLATE.get());
+        simpleBlock(ModBlocks.FLOOR_PLATE_DARK.get());
+        simpleBlock(ModBlocks.FLOOR_PLATE_LIGHT.get());
+        simpleBlock(ModBlocks.PLATING_COPPER.get());
+        simpleBlock(ModBlocks.PLATING_IRON.get());
+        simpleBlock(ModBlocks.PLATING_IRON_RUSTED.get());
+        simpleBlock(ModBlocks.PLATING_LEAD.get());
+        simpleBlock(ModBlocks.PLATING_STEEL.get());
+        simpleBlock(ModBlocks.PLATING_TITANIUM_STEEL.get());
+
         customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_ALUMINUM.get(), "");
         customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_COPPER.get(), "");
         customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_GOLD.get(), "");

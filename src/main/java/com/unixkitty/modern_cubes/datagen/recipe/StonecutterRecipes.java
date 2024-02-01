@@ -23,7 +23,30 @@ public class StonecutterRecipes extends RecipeProvider
     @Override
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer)
     {
-        category(Items.IRON_BLOCK, consumer,
+        category(Items.GRAY_CONCRETE, consumer,
+                ModBlocks.CONCRETE_ASPHALT.get(),
+                ModBlocks.CONCRETE_BURNT.get(),
+                ModBlocks.CONCRETE_GRAY.get(),
+                ModBlocks.CONCRETE_HARSH.get(),
+                ModBlocks.CONCRETE_SIMPLE.get(),
+                ModBlocks.CONCRETE_SIMPLE_TILE.get()
+        );
+
+        category(Items.COPPER_BLOCK, consumer,
+                ModBlocks.CEILING_PLATE.get(),
+                ModBlocks.CEILING_TILE.get(),
+                ModBlocks.FLOOR_PLATE.get(),
+                ModBlocks.FLOOR_PLATE_DARK.get(),
+                ModBlocks.FLOOR_PLATE_LIGHT.get(),
+                ModBlocks.PLATING_COPPER.get(),
+                ModBlocks.PLATING_IRON.get(),
+                ModBlocks.PLATING_IRON_RUSTED.get(),
+                ModBlocks.PLATING_LEAD.get(),
+                ModBlocks.PLATING_STEEL.get(),
+                ModBlocks.PLATING_TITANIUM_STEEL.get()
+        );
+
+        category(Items.COPPER_BLOCK, consumer,
                 ModBlocks.SHEETMETAL_ALUMINUM.get(),
                 ModBlocks.SHEETMETAL_COPPER.get(),
                 ModBlocks.SHEETMETAL_GOLD.get(),
@@ -37,7 +60,7 @@ public class StonecutterRecipes extends RecipeProvider
                 ModBlocks.SHEETMETAL_IRON_ALT.get()
         );
 
-        category(Items.IRON_BLOCK, consumer,
+        category(Items.COPPER_BLOCK, consumer,
                 ModBlocks.SOFT_PLATE_WHITE.get(),
                 ModBlocks.SOFT_PLATE_ORANGE.get(),
                 ModBlocks.SOFT_PLATE_MAGENTA.get(),

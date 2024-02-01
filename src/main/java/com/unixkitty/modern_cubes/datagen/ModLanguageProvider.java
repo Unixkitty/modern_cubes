@@ -16,6 +16,25 @@ public class ModLanguageProvider extends LanguageProvider
     @Override
     protected void addTranslations()
     {
+        add(ModBlocks.CONCRETE_ASPHALT.get(), "Asphalt");
+        add(ModBlocks.CONCRETE_BURNT.get(), "Burnt Concrete");
+        add(ModBlocks.CONCRETE_GRAY.get(), "Industrial Concrete");
+        add(ModBlocks.CONCRETE_HARSH.get(), "Hasrh Concrete");
+        add(ModBlocks.CONCRETE_SIMPLE.get(), "Simple Concrete");
+        add(ModBlocks.CONCRETE_SIMPLE_TILE.get(), "Concrete Tile");
+
+        add(ModBlocks.CEILING_PLATE.get(), "Ceiling Plate");
+        add(ModBlocks.CEILING_TILE.get(), "Ceiling Tile");
+        add(ModBlocks.FLOOR_PLATE.get(), "Floor Plate");
+        add(ModBlocks.FLOOR_PLATE_DARK.get(), "Dark Floor Plate");
+        add(ModBlocks.FLOOR_PLATE_LIGHT.get(), "Light Floor Plate");
+        add(ModBlocks.PLATING_COPPER.get(), "Copper Plating");
+        add(ModBlocks.PLATING_IRON.get(), "Iron Plating");
+        add(ModBlocks.PLATING_IRON_RUSTED.get(), "Rusted Iron Plating");
+        add(ModBlocks.PLATING_LEAD.get(), "Lead Plating");
+        add(ModBlocks.PLATING_STEEL.get(), "Steel Plating");
+        add(ModBlocks.PLATING_TITANIUM_STEEL.get(), "Titanium Steel Plating");
+
         add(ModBlocks.SHEETMETAL_ALUMINUM.get(), "Aluminum Sheetmetal");
         add(ModBlocks.SHEETMETAL_COPPER.get(), "Copper Sheetmetal");
         add(ModBlocks.SHEETMETAL_GOLD.get(), "Gold Sheetmetal");

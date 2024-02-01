@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "modern_cubes:plating_lead"
+  },
+  "result": "modern_cubes:plating_iron"
+}

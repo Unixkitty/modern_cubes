@@ -28,6 +28,27 @@ public final class ModBlocks
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ModernCubes.MODID);
 
     //Regular blocks
+    //Concrete variants
+    public static final RegistryObject<Block> CONCRETE_ASPHALT = register("concrete_asphalt", concreteBlock());
+    public static final RegistryObject<Block> CONCRETE_BURNT = register("concrete_burnt", concreteBlock());
+    public static final RegistryObject<Block> CONCRETE_GRAY = register("concrete_gray", concreteBlock());
+    public static final RegistryObject<Block> CONCRETE_HARSH = register("concrete_harsh", concreteBlock());
+    public static final RegistryObject<Block> CONCRETE_SIMPLE = register("concrete_simple", concreteBlock());
+    public static final RegistryObject<Block> CONCRETE_SIMPLE_TILE = register("concrete_simple_tile", concreteBlock());
+
+    //Basic plating
+    public static final RegistryObject<Block> CEILING_PLATE = register("ceiling_plate", sheetMetalBlock());
+    public static final RegistryObject<Block> CEILING_TILE = register("ceiling_tile", sheetMetalBlock());
+    public static final RegistryObject<Block> FLOOR_PLATE = register("floor_plate", sheetMetalBlock());
+    public static final RegistryObject<Block> FLOOR_PLATE_DARK = register("floor_plate_dark", sheetMetalBlock());
+    public static final RegistryObject<Block> FLOOR_PLATE_LIGHT = register("floor_plate_light", sheetMetalBlock());
+    public static final RegistryObject<Block> PLATING_COPPER = register("plating_copper", sheetMetalBlock());
+    public static final RegistryObject<Block> PLATING_IRON = register("plating_iron", sheetMetalBlock());
+    public static final RegistryObject<Block> PLATING_IRON_RUSTED = register("plating_iron_rusted", sheetMetalBlock());
+    public static final RegistryObject<Block> PLATING_LEAD = register("plating_lead", sheetMetalBlock());
+    public static final RegistryObject<Block> PLATING_STEEL = register("plating_steel", sheetMetalBlock());
+    public static final RegistryObject<Block> PLATING_TITANIUM_STEEL = register("plating_titanium_steel", sheetMetalBlock());
+
     //Sheetmetal
     public static final RegistryObject<Block> SHEETMETAL_ALUMINUM = register("sheetmetal_aluminum", sheetMetalBlock());
     public static final RegistryObject<Block> SHEETMETAL_COPPER = register("sheetmetal_copper", sheetMetalBlock());
@@ -97,9 +118,14 @@ public final class ModBlocks
         return block;
     }
 
+    private static Supplier<? extends Block> concreteBlock()
+    {
+        return () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRAY_CONCRETE));
+    }
+
     private static Supplier<? extends Block> sheetMetalBlock()
     {
-        return () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).destroyTime(Blocks.STONE.defaultDestroyTime()));
+        return () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).destroyTime(Blocks.STONE.defaultDestroyTime()));
     }
     
     private static Supplier<? extends Block> doorBlock()

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "modern_cubes:ceiling_tile"
+  },
+  "result": "modern_cubes:plating_steel"
+}
