@@ -1,6 +1,12 @@
 package com.unixkitty.modern_cubes.datagen;
 
 import com.unixkitty.modern_cubes.ModernCubes;
+import com.unixkitty.modern_cubes.datagen.loot.ModLootTables;
+import com.unixkitty.modern_cubes.datagen.model.ModBlockStates;
+import com.unixkitty.modern_cubes.datagen.model.ModItemModels;
+import com.unixkitty.modern_cubes.datagen.recipe.CraftingTableRecipes;
+import com.unixkitty.modern_cubes.datagen.recipe.StonecutterRecipes;
+import com.unixkitty.modern_cubes.datagen.tag.ModBlockTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

@@ -13,7 +13,7 @@ public class ModernCubes
     public static final String MODID = "modern_cubes";
     public static final String MODNAME = "Modern Cubes";
 
-    public static final Logger LOG = LogManager.getLogger(MODNAME);
+//    public static final Logger LOG = LogManager.getLogger(MODNAME);
 
     public ModernCubes()
     {

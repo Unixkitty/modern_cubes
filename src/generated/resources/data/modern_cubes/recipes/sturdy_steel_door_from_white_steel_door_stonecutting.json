@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "modern_cubes:white_steel_door"
+  },
+  "result": "modern_cubes:sturdy_steel_door"
+}

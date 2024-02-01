@@ -1,3 +1,18 @@
 {
-  "block.modern_cubes.reinforced_glass": "Reinforced Glass"
+  "block.modern_cubes.beam": "Metal Beam",
+  "block.modern_cubes.beam_bolts": "Metal Bolted Beam",
+  "block.modern_cubes.blue_steel_door_glass": "Blue Steel Door",
+  "block.modern_cubes.fire_door": "Fire Door",
+  "block.modern_cubes.reinforced_glass": "Reinforced Glass",
+  "block.modern_cubes.steel_door": "Blue Steel Door",
+  "block.modern_cubes.strong_door": "Strong Door",
+  "block.modern_cubes.sturdy_rusty_door": "Sturdy Rusty Door",
+  "block.modern_cubes.sturdy_steel_door": "Sturdy Steel Door",
+  "block.modern_cubes.sturdy_white_steel_door": "Sturdy White Steel Door",
+  "block.modern_cubes.sturdy_white_steel_door_glass": "Sturdy White Steel Door (Glass)",
+  "block.modern_cubes.warning_rusty_door": "Warning Rusty Door",
+  "block.modern_cubes.warning_steel_door": "Warning Steel Door",
+  "block.modern_cubes.warning_white_steel_door": "Warning White Steel Door",
+  "block.modern_cubes.white_steel_door": "White Steel Door",
+  "block.modern_cubes.white_steel_door_glass": "White Steel Door (Glass)"
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "textures": {
+    "bottom": "modern_cubes:block/strong_door_bottom",
+    "top": "modern_cubes:block/strong_door_top"
+  }
+}

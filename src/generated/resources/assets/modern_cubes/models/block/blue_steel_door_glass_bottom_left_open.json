@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "modern_cubes:block/blue_steel_door_glass_bottom",
+    "top": "modern_cubes:block/blue_steel_door_glass_top"
+  }
+}
