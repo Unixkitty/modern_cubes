@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "G": {
+      "tag": "forge:glass/colorless"
+    },
+    "O": {
+      "tag": "forge:obsidian"
+    },
+    "i": {
+      "tag": "forge:ingots/iron"
+    }
+  },
+  "pattern": [
+    "iGi",
+    "GOG",
+    "iGi"
+  ],
+  "result": {
+    "count": 16,
+    "item": "modern_cubes:reinforced_glass"
+  }
+}
