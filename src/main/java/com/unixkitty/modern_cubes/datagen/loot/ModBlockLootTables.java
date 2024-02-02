@@ -4,6 +4,7 @@ import com.unixkitty.modern_cubes.ModernCubes;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
@@ -26,6 +27,10 @@ public class ModBlockLootTables extends BlockLoot
                 if (block instanceof DoorBlock)
                 {
                     add(block, BlockLoot::createDoorTable);
+                }
+                else if (block instanceof SlabBlock)
+                {
+                    add(block, BlockLoot::createSlabItemTable);
                 }
                 else
                 {

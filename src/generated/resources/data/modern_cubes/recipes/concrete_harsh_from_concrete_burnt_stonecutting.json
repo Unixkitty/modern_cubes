@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "modern_cubes:concrete_burnt"
-  },
-  "result": "modern_cubes:concrete_harsh"
-}

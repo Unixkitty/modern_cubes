@@ -29,8 +29,13 @@ public final class ModBlocks
 
     //Regular blocks
     //Concrete variants
+    public static final RegistryObject<Block> CONCRETE_PAVER_SLAB = register("concrete_paver_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB)));
+    public static final RegistryObject<Block> CONCRETE_SIMPLE_TILE_SLAB = register("concrete_simple_tile_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB)));
+
+    public static final RegistryObject<Block> ASPHALT_PLAIN = register("asphalt_plain", concreteBlock());
+    public static final RegistryObject<Block> CONCRETE_PAVER = register("concrete_paver", concreteBlock());
+    public static final RegistryObject<Block> CONCRETE_PLAIN = register("concrete_plain", concreteBlock());
     public static final RegistryObject<Block> CONCRETE_ASPHALT = register("concrete_asphalt", concreteBlock());
-    public static final RegistryObject<Block> CONCRETE_BURNT = register("concrete_burnt", concreteBlock());
     public static final RegistryObject<Block> CONCRETE_GRAY = register("concrete_gray", concreteBlock());
     public static final RegistryObject<Block> CONCRETE_HARSH = register("concrete_harsh", concreteBlock());
     public static final RegistryObject<Block> CONCRETE_SIMPLE = register("concrete_simple", concreteBlock());

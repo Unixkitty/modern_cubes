@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modern_cubes:block/concrete_simple_tile_slab"
+    },
+    "type=double": {
+      "model": "modern_cubes:block/concrete_simple_tile"
+    },
+    "type=top": {
+      "model": "modern_cubes:block/concrete_simple_tile_slab_top"
+    }
+  }
+}

@@ -1,7 +1,11 @@
 {
   "values": [
+    "modern_cubes:concrete_paver_slab",
+    "modern_cubes:concrete_simple_tile_slab",
+    "modern_cubes:asphalt_plain",
+    "modern_cubes:concrete_paver",
+    "modern_cubes:concrete_plain",
     "modern_cubes:concrete_asphalt",
-    "modern_cubes:concrete_burnt",
     "modern_cubes:concrete_gray",
     "modern_cubes:concrete_harsh",
     "modern_cubes:concrete_simple",

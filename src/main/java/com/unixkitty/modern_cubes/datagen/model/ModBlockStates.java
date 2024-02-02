@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -23,12 +24,17 @@ public class ModBlockStates extends BlockStateProvider
     @Override
     protected void registerStatesAndModels()
     {
+        simpleBlock(ModBlocks.ASPHALT_PLAIN.get());
+        simpleBlock(ModBlocks.CONCRETE_PAVER.get());
+        simpleBlock(ModBlocks.CONCRETE_PLAIN.get());
         simpleBlock(ModBlocks.CONCRETE_ASPHALT.get());
-        simpleBlock(ModBlocks.CONCRETE_BURNT.get());
         simpleBlock(ModBlocks.CONCRETE_GRAY.get());
         simpleBlock(ModBlocks.CONCRETE_HARSH.get());
         simpleBlock(ModBlocks.CONCRETE_SIMPLE.get());
         simpleBlock(ModBlocks.CONCRETE_SIMPLE_TILE.get());
+
+        customSlab((SlabBlock) ModBlocks.CONCRETE_PAVER_SLAB.get(), ModBlocks.CONCRETE_PAVER.get());
+        customSlab((SlabBlock) ModBlocks.CONCRETE_SIMPLE_TILE_SLAB.get(), ModBlocks.CONCRETE_SIMPLE_TILE.get());
 
         customAxisBlockSingle((RotatedPillarBlock) ModBlocks.CEILING_PLATE.get(), "");
         simpleBlock(ModBlocks.CEILING_TILE.get());
@@ -91,6 +97,12 @@ public class ModBlockStates extends BlockStateProvider
 
         simpleCutoutBlock(ModBlocks.REINFORCED_GLASS.get());
         simpleCutoutBlock(ModBlocks.REINFORCED_GLASS_CTM.get());
+    }
+
+    public void customSlab(SlabBlock slabBlock, Block fullBlock) {
+        ResourceLocation fullBlockTexture = blockTexture(fullBlock);
+
+        slabBlock(slabBlock, fullBlockTexture, extendBlockTexture(fullBlockTexture, "_slab_side"), fullBlockTexture, fullBlockTexture);
     }
 
     private void customDoor(DoorBlock block)

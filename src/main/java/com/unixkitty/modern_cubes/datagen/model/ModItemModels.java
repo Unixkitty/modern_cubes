@@ -19,8 +19,13 @@ public class ModItemModels extends ItemModelProvider
     @Override
     protected void registerModels()
     {
+        copyParent(ModBlocks.CONCRETE_PAVER_SLAB.get());
+        copyParent(ModBlocks.CONCRETE_SIMPLE_TILE_SLAB.get());
+
+        copyParent(ModBlocks.ASPHALT_PLAIN.get());
+        copyParent(ModBlocks.CONCRETE_PAVER.get());
+        copyParent(ModBlocks.CONCRETE_PLAIN.get());
         copyParent(ModBlocks.CONCRETE_ASPHALT.get());
-        copyParent(ModBlocks.CONCRETE_BURNT.get());
         copyParent(ModBlocks.CONCRETE_GRAY.get());
         copyParent(ModBlocks.CONCRETE_HARSH.get());
         copyParent(ModBlocks.CONCRETE_SIMPLE.get());

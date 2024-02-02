@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modern_cubes:block/concrete_paver_slab"
+    },
+    "type=double": {
+      "model": "modern_cubes:block/concrete_paver"
+    },
+    "type=top": {
+      "model": "modern_cubes:block/concrete_paver_slab_top"
+    }
+  }
+}

@@ -18,8 +18,12 @@ public class ModBlockTags extends BlockTagsProvider
     protected void addTags()
     {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.CONCRETE_PAVER_SLAB.get())
+                .add(ModBlocks.CONCRETE_SIMPLE_TILE_SLAB.get())
+                .add(ModBlocks.ASPHALT_PLAIN.get())
+                .add(ModBlocks.CONCRETE_PAVER.get())
+                .add(ModBlocks.CONCRETE_PLAIN.get())
                 .add(ModBlocks.CONCRETE_ASPHALT.get())
-                .add(ModBlocks.CONCRETE_BURNT.get())
                 .add(ModBlocks.CONCRETE_GRAY.get())
                 .add(ModBlocks.CONCRETE_HARSH.get())
                 .add(ModBlocks.CONCRETE_SIMPLE.get())
@@ -81,8 +85,12 @@ public class ModBlockTags extends BlockTagsProvider
                 .add(ModBlocks.REINFORCED_GLASS_CTM.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.CONCRETE_PAVER_SLAB.get())
+                .add(ModBlocks.CONCRETE_SIMPLE_TILE_SLAB.get())
+                .add(ModBlocks.ASPHALT_PLAIN.get())
+                .add(ModBlocks.CONCRETE_PAVER.get())
+                .add(ModBlocks.CONCRETE_PLAIN.get())
                 .add(ModBlocks.CONCRETE_ASPHALT.get())
-                .add(ModBlocks.CONCRETE_BURNT.get())
                 .add(ModBlocks.CONCRETE_GRAY.get())
                 .add(ModBlocks.CONCRETE_HARSH.get())
                 .add(ModBlocks.CONCRETE_SIMPLE.get())

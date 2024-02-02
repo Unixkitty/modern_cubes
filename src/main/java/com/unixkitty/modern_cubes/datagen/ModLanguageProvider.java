@@ -16,10 +16,14 @@ public class ModLanguageProvider extends LanguageProvider
     @Override
     protected void addTranslations()
     {
-        add(ModBlocks.CONCRETE_ASPHALT.get(), "Asphalt");
-        add(ModBlocks.CONCRETE_BURNT.get(), "Burnt Concrete");
+        add(ModBlocks.CONCRETE_PAVER_SLAB.get(), "Concrete Paver Slab");
+        add(ModBlocks.CONCRETE_SIMPLE_TILE_SLAB.get(), "Concrete Tile Slab");
+        add(ModBlocks.ASPHALT_PLAIN.get(), "Asphalt");
+        add(ModBlocks.CONCRETE_PAVER.get(), "Concrete Paver");
+        add(ModBlocks.CONCRETE_PLAIN.get(), "Plain Concrete");
+        add(ModBlocks.CONCRETE_ASPHALT.get(), "Smooth Asphalt");
         add(ModBlocks.CONCRETE_GRAY.get(), "Industrial Concrete");
-        add(ModBlocks.CONCRETE_HARSH.get(), "Hasrh Concrete");
+        add(ModBlocks.CONCRETE_HARSH.get(), "Harsh Concrete");
         add(ModBlocks.CONCRETE_SIMPLE.get(), "Simple Concrete");
         add(ModBlocks.CONCRETE_SIMPLE_TILE.get(), "Concrete Tile");
 

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "modern_cubes:concrete_paver"
+  },
+  "result": "modern_cubes:concrete_paver_slab"
+}

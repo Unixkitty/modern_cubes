@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "modern_cubes:block/concrete_paver",
+    "side": "modern_cubes:block/concrete_paver_slab_side",
+    "top": "modern_cubes:block/concrete_paver"
+  }
+}

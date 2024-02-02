@@ -23,9 +23,14 @@ public class StonecutterRecipes extends RecipeProvider
     @Override
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer)
     {
+        simpleAmount(ModBlocks.CONCRETE_PAVER_SLAB.get(), 2, ModBlocks.CONCRETE_PAVER.get(), consumer);
+        simpleAmount(ModBlocks.CONCRETE_SIMPLE_TILE_SLAB.get(), 2, ModBlocks.CONCRETE_SIMPLE_TILE.get(), consumer);
+
         category(Items.GRAY_CONCRETE, consumer,
+                ModBlocks.ASPHALT_PLAIN.get(),
+                ModBlocks.CONCRETE_PAVER.get(),
+                ModBlocks.CONCRETE_PLAIN.get(),
                 ModBlocks.CONCRETE_ASPHALT.get(),
-                ModBlocks.CONCRETE_BURNT.get(),
                 ModBlocks.CONCRETE_GRAY.get(),
                 ModBlocks.CONCRETE_HARSH.get(),
                 ModBlocks.CONCRETE_SIMPLE.get(),
@@ -128,7 +133,12 @@ public class StonecutterRecipes extends RecipeProvider
 
     private void simple(ItemLike result, ItemLike ingredient, @NotNull Consumer<FinishedRecipe> consumer)
     {
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ingredient), result)
+        simpleAmount(result, 1, ingredient, consumer);
+    }
+
+    private void simpleAmount(ItemLike result, int amount, ItemLike ingredient, @NotNull Consumer<FinishedRecipe> consumer)
+    {
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ingredient), result, amount)
                 .unlockedBy("has_item", has(ingredient))
                 .save(consumer, ModernCubes.MODID + ":" + result.asItem().toString().toLowerCase() + "_from_" + ingredient.asItem().toString().toLowerCase() + "_stonecutting");
     }
