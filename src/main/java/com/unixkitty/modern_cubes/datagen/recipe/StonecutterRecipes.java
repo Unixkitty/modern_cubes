@@ -97,6 +97,8 @@ public class StonecutterRecipes extends RecipeProvider
 
         simple(ModBlocks.BEAM.get(), Items.IRON_INGOT, consumer);
         simpleUndoable(ModBlocks.BEAM_BOLTS.get(), ModBlocks.BEAM.get(), consumer);
+
+        simpleUndoable(ModBlocks.REINFORCED_GLASS_CTM.get(), ModBlocks.REINFORCED_GLASS.get(), consumer);
     }
 
     //Make things craftable into each other, Chisel-style

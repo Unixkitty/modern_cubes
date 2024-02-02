@@ -59,6 +59,7 @@
     "modern_cubes:white_steel_door_glass",
     "modern_cubes:beam",
     "modern_cubes:beam_bolts",
-    "modern_cubes:reinforced_glass"
+    "modern_cubes:reinforced_glass",
+    "modern_cubes:reinforced_glass_ctm"
   ]
 }

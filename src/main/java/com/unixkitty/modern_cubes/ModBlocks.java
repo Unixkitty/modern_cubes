@@ -110,6 +110,7 @@ public final class ModBlocks
             .isSuffocating(Blocks::never)
             .isViewBlocking(Blocks::never)
             .strength(Blocks.IRON_BLOCK.defaultDestroyTime(), Blocks.OBSIDIAN.getExplosionResistance())));
+    public static final RegistryObject<Block> REINFORCED_GLASS_CTM = register("reinforced_glass_ctm", () -> new GlassBlock(BlockBehaviour.Properties.copy(REINFORCED_GLASS.get())));
 
     private static RegistryObject<Block> register(String name, Supplier<? extends Block> supplier)
     {

@@ -90,6 +90,7 @@ public class ModBlockStates extends BlockStateProvider
         customAxisBlock((RotatedPillarBlock) ModBlocks.BEAM_BOLTS.get(), ModBlocks.BEAM.get());
 
         simpleCutoutBlock(ModBlocks.REINFORCED_GLASS.get());
+        simpleCutoutBlock(ModBlocks.REINFORCED_GLASS_CTM.get());
     }
 
     private void customDoor(DoorBlock block)

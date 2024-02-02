@@ -85,11 +85,18 @@ public class ModItemModels extends ItemModelProvider
         copyParent(ModBlocks.BEAM_BOLTS.get());
 
         copyParent(ModBlocks.REINFORCED_GLASS.get());
+        copyDifferentParent(ModBlocks.REINFORCED_GLASS_CTM.get(), ModBlocks.REINFORCED_GLASS.get());
     }
 
     @SuppressWarnings("ConstantConditions")
     private void copyParent(Block block)
     {
-        withExistingParent(ForgeRegistries.ITEMS.getKey(block.asItem()).getPath(), modLoc("block/" + block.asItem().toString().toLowerCase()));
+        copyDifferentParent(block, block);
+    }
+
+    @SuppressWarnings("ConstantConditions")
+    private void copyDifferentParent(Block block, Block parentBlock)
+    {
+        withExistingParent(ForgeRegistries.ITEMS.getKey(block.asItem()).getPath(), modLoc("block/" + parentBlock.asItem().toString().toLowerCase()));
     }
 }

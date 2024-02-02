@@ -77,7 +77,8 @@ public class ModBlockTags extends BlockTagsProvider
                 .add(ModBlocks.WHITE_STEEL_DOOR_GLASS.get())
                 .add(ModBlocks.BEAM.get())
                 .add(ModBlocks.BEAM_BOLTS.get())
-                .add(ModBlocks.REINFORCED_GLASS.get());
+                .add(ModBlocks.REINFORCED_GLASS.get())
+                .add(ModBlocks.REINFORCED_GLASS_CTM.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.CONCRETE_ASPHALT.get())
@@ -139,6 +140,7 @@ public class ModBlockTags extends BlockTagsProvider
                 .add(ModBlocks.WHITE_STEEL_DOOR_GLASS.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.REINFORCED_GLASS.get());
+                .add(ModBlocks.REINFORCED_GLASS.get())
+                .add(ModBlocks.REINFORCED_GLASS_CTM.get());
     }
 }

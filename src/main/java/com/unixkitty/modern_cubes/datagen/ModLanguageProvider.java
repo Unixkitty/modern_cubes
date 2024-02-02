@@ -82,5 +82,6 @@ public class ModLanguageProvider extends LanguageProvider
         add(ModBlocks.BEAM_BOLTS.get(), "Metal Bolted Beam");
 
         add(ModBlocks.REINFORCED_GLASS.get(), "Reinforced Glass");
+        add(ModBlocks.REINFORCED_GLASS_CTM.get(), "Reinforced Glass (CTM)");
     }
 }
