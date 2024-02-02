@@ -19,6 +19,33 @@ public class ModItemModels extends ItemModelProvider
     @Override
     protected void registerModels()
     {
+        copyParent(ModBlocks.SPACE_PLATING_INSET.get());
+        copyParent(ModBlocks.SPACE_PLATING_RIVETS.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_BLACK.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_BLUE.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_BROWN.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_CYAN.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_GRAY.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_GREEN.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_LIGHT_BLUE.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_LIGHT_GRAY.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_LIME.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_MAGENTA.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_ORANGE.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_PINK.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_PURPLE.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_RED.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_WHITE.get());
+        copyParent(ModBlocks.SPACE_PLATING_STRIPE_YELLOW.get());
+        copyParent(ModBlocks.SPACE_PLATING_VENT.get());
+        copyParent(ModBlocks.SPACE_PLATING_VENT_CTM.get());
+
+        copyParent(ModBlocks.SPACE_PLATING_TILE.get());
+        copyParent(ModBlocks.SPACE_PLATING.get());
+        copyParent(ModBlocks.SPACE_PLATING_SQUARE.get());
+
+        copyTrapdoor(ModBlocks.SPACE_PLATING_HATCH.get());
+
         copyParent(ModBlocks.CONCRETE_PAVER_SLAB.get());
         copyParent(ModBlocks.CONCRETE_SIMPLE_TILE_SLAB.get());
 
@@ -94,6 +121,11 @@ public class ModItemModels extends ItemModelProvider
     }
 
     @SuppressWarnings("ConstantConditions")
+    private void copyTrapdoor(Block block)
+    {
+        withExistingParent(ForgeRegistries.ITEMS.getKey(block.asItem()).getPath(), modLoc("block/" + block.asItem().toString().toLowerCase() + "_bottom"));
+    }
+
     private void copyParent(Block block)
     {
         copyDifferentParent(block, block);

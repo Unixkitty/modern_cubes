@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "modern_cubes:block/space_plating_stripe_light_gray",
+    "side": "modern_cubes:block/space_plating_stripe_light_gray"
+  }
+}

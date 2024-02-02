@@ -4,10 +4,7 @@ import com.unixkitty.modern_cubes.ModBlocks;
 import com.unixkitty.modern_cubes.ModernCubes;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DoorBlock;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -24,6 +21,33 @@ public class ModBlockStates extends BlockStateProvider
     @Override
     protected void registerStatesAndModels()
     {
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_INSET.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_RIVETS.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_BLACK.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_BLUE.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_BROWN.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_CYAN.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_GRAY.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_GREEN.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_LIGHT_BLUE.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_LIGHT_GRAY.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_LIME.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_MAGENTA.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_ORANGE.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_PINK.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_PURPLE.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_RED.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_WHITE.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_YELLOW.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_VENT.get());
+        simpleBlock(ModBlocks.SPACE_PLATING_VENT_CTM.get());
+
+        simpleBlock(ModBlocks.SPACE_PLATING_TILE.get());
+        simpleBlock(ModBlocks.SPACE_PLATING.get());
+        simpleBlock(ModBlocks.SPACE_PLATING_SQUARE.get());
+
+        customTrapdoor((TrapDoorBlock)ModBlocks.SPACE_PLATING_HATCH.get());
+
         simpleBlock(ModBlocks.ASPHALT_PLAIN.get());
         simpleBlock(ModBlocks.CONCRETE_PAVER.get());
         simpleBlock(ModBlocks.CONCRETE_PLAIN.get());
@@ -36,7 +60,7 @@ public class ModBlockStates extends BlockStateProvider
         customSlab((SlabBlock) ModBlocks.CONCRETE_PAVER_SLAB.get(), ModBlocks.CONCRETE_PAVER.get());
         customSlab((SlabBlock) ModBlocks.CONCRETE_SIMPLE_TILE_SLAB.get(), ModBlocks.CONCRETE_SIMPLE_TILE.get());
 
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.CEILING_PLATE.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.CEILING_PLATE.get());
         simpleBlock(ModBlocks.CEILING_TILE.get());
         simpleBlock(ModBlocks.FLOOR_PLATE.get());
         simpleBlock(ModBlocks.FLOOR_PLATE_DARK.get());
@@ -48,34 +72,34 @@ public class ModBlockStates extends BlockStateProvider
         simpleBlock(ModBlocks.PLATING_STEEL.get());
         simpleBlock(ModBlocks.PLATING_TITANIUM_STEEL.get());
 
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_ALUMINUM.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_COPPER.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_GOLD.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_IRON.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_LEAD.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_NICKEL.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_SILVER.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_STEEL.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_URANIUM.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_COPPER_ALT.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_IRON_ALT.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_ALUMINUM.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_COPPER.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_GOLD.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_IRON.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_LEAD.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_NICKEL.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_SILVER.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_STEEL.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_URANIUM.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_COPPER_ALT.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SHEETMETAL_IRON_ALT.get());
 
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_WHITE.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_ORANGE.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_MAGENTA.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_LIGHT_BLUE.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_YELLOW.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_LIME.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_PINK.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_GRAY.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_LIGHT_GRAY.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_CYAN.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_PURPLE.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_BLUE.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_BROWN.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_GREEN.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_RED.get(), "");
-        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_BLACK.get(), "");
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_WHITE.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_ORANGE.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_MAGENTA.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_LIGHT_BLUE.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_YELLOW.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_LIME.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_PINK.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_GRAY.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_LIGHT_GRAY.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_CYAN.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_PURPLE.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_BLUE.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_BROWN.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_GREEN.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_RED.get());
+        customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SOFT_PLATE_BLACK.get());
 
         customDoor((DoorBlock) ModBlocks.STEEL_DOOR.get());
         customDoor((DoorBlock) ModBlocks.STRONG_DOOR.get());
@@ -99,6 +123,11 @@ public class ModBlockStates extends BlockStateProvider
         simpleCutoutBlock(ModBlocks.REINFORCED_GLASS_CTM.get());
     }
 
+    private void customTrapdoor(TrapDoorBlock block)
+    {
+        trapdoorBlock(block, blockTexture(block), true);
+    }
+
     public void customSlab(SlabBlock slabBlock, Block fullBlock) {
         ResourceLocation fullBlockTexture = blockTexture(fullBlock);
 
@@ -113,6 +142,11 @@ public class ModBlockStates extends BlockStateProvider
     private void customDoorCutout(DoorBlock block)
     {
         doorBlockWithRenderType(block, extendBlockTexture(blockTexture(block), "_bottom"), extendBlockTexture(blockTexture(block), "_top"), "cutout");
+    }
+
+    private void customAxisBlockSingle(RotatedPillarBlock block)
+    {
+        customAxisBlockSingle(block, "");
     }
 
     private void customAxisBlockSingle(RotatedPillarBlock block, String suffix)

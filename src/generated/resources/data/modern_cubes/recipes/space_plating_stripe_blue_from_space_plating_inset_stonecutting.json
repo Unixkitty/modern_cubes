@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "modern_cubes:space_plating_inset"
+  },
+  "result": "modern_cubes:space_plating_stripe_blue"
+}

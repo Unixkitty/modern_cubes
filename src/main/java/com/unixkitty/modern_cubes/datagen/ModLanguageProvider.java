@@ -16,6 +16,33 @@ public class ModLanguageProvider extends LanguageProvider
     @Override
     protected void addTranslations()
     {
+        add(ModBlocks.SPACE_PLATING_INSET.get(), "Space Plating Inset");
+        add(ModBlocks.SPACE_PLATING_RIVETS.get(), "Space Plating Rivets");
+        add(ModBlocks.SPACE_PLATING_STRIPE_BLACK.get(), "Space Plating Black Stripe");
+        add(ModBlocks.SPACE_PLATING_STRIPE_BLUE.get(), "Space Plating Blue Stripe");
+        add(ModBlocks.SPACE_PLATING_STRIPE_BROWN.get(), "Space Plating Brown Stripe");
+        add(ModBlocks.SPACE_PLATING_STRIPE_CYAN.get(), "Space Plating Cyan Stripe");
+        add(ModBlocks.SPACE_PLATING_STRIPE_GRAY.get(), "Space Plating Gray Stripe");
+        add(ModBlocks.SPACE_PLATING_STRIPE_GREEN.get(), "Space Plating Green Stripe");
+        add(ModBlocks.SPACE_PLATING_STRIPE_LIGHT_BLUE.get(), "Space Plating Light Blue Stripe");
+        add(ModBlocks.SPACE_PLATING_STRIPE_LIGHT_GRAY.get(), "Space Plating Light Gray Stripe");
+        add(ModBlocks.SPACE_PLATING_STRIPE_LIME.get(), "Space Plating Lime Stripe");
+        add(ModBlocks.SPACE_PLATING_STRIPE_MAGENTA.get(), "Space Plating Magenta Stripe");
+        add(ModBlocks.SPACE_PLATING_STRIPE_ORANGE.get(), "Space Plating Orange Stripe");
+        add(ModBlocks.SPACE_PLATING_STRIPE_PINK.get(), "Space Plating Pink Stripe");
+        add(ModBlocks.SPACE_PLATING_STRIPE_PURPLE.get(), "Space Plating Purple Stripe");
+        add(ModBlocks.SPACE_PLATING_STRIPE_RED.get(), "Space Plating Red Stripe");
+        add(ModBlocks.SPACE_PLATING_STRIPE_WHITE.get(), "Space Plating White Stripe");
+        add(ModBlocks.SPACE_PLATING_STRIPE_YELLOW.get(), "Space Plating Yellow Stripe");
+        add(ModBlocks.SPACE_PLATING_VENT.get(), "Space Plating Vent");
+        add(ModBlocks.SPACE_PLATING_VENT_CTM.get(), "Space Plating Vent (CTM)");
+
+        add(ModBlocks.SPACE_PLATING_TILE.get(), "Space Plating Tile");
+        add(ModBlocks.SPACE_PLATING.get(), "Space Plating");
+        add(ModBlocks.SPACE_PLATING_SQUARE.get(), "Space Plating Square");
+
+        add(ModBlocks.SPACE_PLATING_HATCH.get(), "Space Plating Hatch");
+
         add(ModBlocks.CONCRETE_PAVER_SLAB.get(), "Concrete Paver Slab");
         add(ModBlocks.CONCRETE_SIMPLE_TILE_SLAB.get(), "Concrete Tile Slab");
         add(ModBlocks.ASPHALT_PLAIN.get(), "Asphalt");

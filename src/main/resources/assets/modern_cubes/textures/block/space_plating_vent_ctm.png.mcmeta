@@ -1,0 +1,9 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "pillar",
+    "textures": [
+      "modern_cubes:block/space_plating_vent_ctm_0"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_orientable_trapdoor_open",
+  "textures": {
+    "texture": "modern_cubes:block/space_plating_hatch"
+  }
+}

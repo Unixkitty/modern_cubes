@@ -23,6 +23,34 @@ public class StonecutterRecipes extends RecipeProvider
     @Override
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer)
     {
+        category(Items.IRON_BLOCK, consumer,
+                ModBlocks.SPACE_PLATING_INSET.get(),
+                ModBlocks.SPACE_PLATING_RIVETS.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_BLACK.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_BLUE.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_BROWN.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_CYAN.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_GRAY.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_GREEN.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_LIGHT_BLUE.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_LIGHT_GRAY.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_LIME.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_MAGENTA.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_ORANGE.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_PINK.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_PURPLE.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_RED.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_WHITE.get(),
+                ModBlocks.SPACE_PLATING_STRIPE_YELLOW.get(),
+                ModBlocks.SPACE_PLATING_VENT.get(),
+                ModBlocks.SPACE_PLATING_VENT_CTM.get(),
+                ModBlocks.SPACE_PLATING_TILE.get(),
+                ModBlocks.SPACE_PLATING.get(),
+                ModBlocks.SPACE_PLATING_SQUARE.get()
+        );
+
+        simpleUndoable(ModBlocks.SPACE_PLATING_HATCH.get(), Items.IRON_TRAPDOOR, consumer);
+
         simpleAmount(ModBlocks.CONCRETE_PAVER_SLAB.get(), 2, ModBlocks.CONCRETE_PAVER.get(), consumer);
         simpleAmount(ModBlocks.CONCRETE_SIMPLE_TILE_SLAB.get(), 2, ModBlocks.CONCRETE_SIMPLE_TILE.get(), consumer);
 
