@@ -31,12 +31,17 @@ public class StonecutterRecipes extends RecipeProvider
                 ModBlocks.LABORATORY_STEEL_LARGE.get(),
                 ModBlocks.LABORATORY_STEEL_SMALL.get(),
                 ModBlocks.LABORATORY_PANEL.get(),
+                ModBlocks.LABORATORY_PANEL_DOTTED.get(),
                 ModBlocks.LABORATORY_ROUNDEL.get(),
                 ModBlocks.LABORATORY_SCREEN_CLEAR.get(),
                 ModBlocks.LABORATORY_SCREEN_FUZZY.get(),
                 ModBlocks.LABORATORY_TILES.get(),
                 ModBlocks.LABORATORY_TILES_CHECKER.get(),
-                ModBlocks.LABORATORY_TILES_FLOOR.get()
+                ModBlocks.LABORATORY_TILES_FLOOR.get(),
+                ModBlocks.LABORATORY_VENTS.get(),
+                ModBlocks.LABORATORY_INFOCON.get(),
+                ModBlocks.LABORATORY_DIRECTION_UPRIGHT.get(),
+                ModBlocks.LABORATORY_DIRECTION_DOWNLEFT.get()
         );
 
         simple(ModBlocks.TECHNICAL_CAUTION_TAPE.get(), Items.IRON_INGOT, consumer);

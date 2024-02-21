@@ -4,7 +4,7 @@
         "type": "ctm",
         "layer": "SOLID",
         "textures": [
-            "modern_cubes:block/space_plating_tile_ctm"
+            "modern_cubes:block/space_plating_tile-ctm"
         ]
     }
 }

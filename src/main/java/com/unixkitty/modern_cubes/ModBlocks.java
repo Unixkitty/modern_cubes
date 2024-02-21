@@ -33,6 +33,7 @@ public final class ModBlocks
     public static final RegistryObject<Block> LABORATORY_STEEL_SMALL = register("laboratory_steel_small", weakMetalPillarBlock());
     public static final RegistryObject<Block> LABORATORY_STEEL_SMALL_SLAB = register("laboratory_steel_small_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CUT_COPPER_SLAB)));
     public static final RegistryObject<Block> LABORATORY_PANEL = register("laboratory_panel", weakMetalBlock());
+    public static final RegistryObject<Block> LABORATORY_PANEL_DOTTED = register("laboratory_panel_dotted", weakMetalBlock());
     public static final RegistryObject<Block> LABORATORY_ROUNDEL = register("laboratory_roundel", weakMetalBlock());
     public static final RegistryObject<Block> LABORATORY_SCREEN_CLEAR = register("laboratory_screen_clear", weakMetalBlock());
     public static final RegistryObject<Block> LABORATORY_SCREEN_FUZZY = register("laboratory_screen_fuzzy", weakMetalBlock());
@@ -41,6 +42,10 @@ public final class ModBlocks
     public static final RegistryObject<Block> LABORATORY_TILES = register("laboratory_tiles", weakMetalBlock());
     public static final RegistryObject<Block> LABORATORY_TILES_CHECKER = register("laboratory_tiles_checker", weakMetalBlock());
     public static final RegistryObject<Block> LABORATORY_TILES_FLOOR = register("laboratory_tiles_floor", weakMetalBlock());
+    public static final RegistryObject<Block> LABORATORY_VENTS = register("laboratory_vents", weakMetalBlock());
+    public static final RegistryObject<Block> LABORATORY_INFOCON = register("laboratory_infocon", weakMetalBlock());
+    public static final RegistryObject<Block> LABORATORY_DIRECTION_UPRIGHT = register("laboratory_direction_upright", weakMetalBlock());
+    public static final RegistryObject<Block> LABORATORY_DIRECTION_DOWNLEFT = register("laboratory_direction_downleft", weakMetalBlock());
 
     public static final RegistryObject<Block> TECHNICAL_CAUTION_TAPE = register("technical_caution_tape", weakMetalBlock());
 
@@ -202,6 +207,7 @@ public final class ModBlocks
     public static final RegistryObject<Block> BEAM_BOLTS = register("beam_bolts", sheetMetalBlock());
 
     //Special
+    @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> REINFORCED_GLASS = register("reinforced_glass", () -> new GlassBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
             .requiresCorrectToolForDrops()
             .sound(SoundType.GLASS)

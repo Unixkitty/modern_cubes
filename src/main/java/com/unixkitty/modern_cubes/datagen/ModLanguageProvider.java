@@ -20,6 +20,7 @@ public class ModLanguageProvider extends LanguageProvider
         add(ModBlocks.LABORATORY_STEEL_LARGE.get(), "Laboratory Large Steel");
         add(ModBlocks.LABORATORY_STEEL_SMALL.get(), "Laboratory Small Steel");
         add(ModBlocks.LABORATORY_PANEL.get(), "Laboratory Panel");
+        add(ModBlocks.LABORATORY_PANEL_DOTTED.get(), "Laboratory Dotted Panel");
         add(ModBlocks.LABORATORY_ROUNDEL.get(), "Laboratory Roundel");
         add(ModBlocks.LABORATORY_SCREEN_CLEAR.get(), "Clear Laboratory Screen");
         add(ModBlocks.LABORATORY_SCREEN_FUZZY.get(), "Fuzzy Laboratory Screen");
@@ -28,6 +29,10 @@ public class ModLanguageProvider extends LanguageProvider
         add(ModBlocks.LABORATORY_TILES.get(), "Laboratory Tiles");
         add(ModBlocks.LABORATORY_TILES_CHECKER.get(), "Laboratory Checker Tiles");
         add(ModBlocks.LABORATORY_TILES_FLOOR.get(), "Laboratory Floor Tiles");
+        add(ModBlocks.LABORATORY_VENTS.get(), "Laboratory Vents");
+        add(ModBlocks.LABORATORY_INFOCON.get(), "Laboratory Info Screen");
+        add(ModBlocks.LABORATORY_DIRECTION_UPRIGHT.get(), "Laboratory Direction Right");
+        add(ModBlocks.LABORATORY_DIRECTION_DOWNLEFT.get(), "Laboratory Direction Left");
 
         add(ModBlocks.TECHNICAL_CAUTION_TAPE.get(), "Caution Tape");
 

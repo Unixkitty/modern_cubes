@@ -23,6 +23,7 @@ public class ModBlockTags extends BlockTagsProvider
         pickaxe(ModBlocks.LABORATORY_STEEL_LARGE.get());
         pickaxe(ModBlocks.LABORATORY_STEEL_SMALL.get());
         pickaxe(ModBlocks.LABORATORY_PANEL.get());
+        pickaxe(ModBlocks.LABORATORY_PANEL_DOTTED.get());
         pickaxe(ModBlocks.LABORATORY_ROUNDEL.get());
         pickaxe(ModBlocks.LABORATORY_SCREEN_CLEAR.get());
         pickaxe(ModBlocks.LABORATORY_SCREEN_FUZZY.get());
@@ -31,6 +32,10 @@ public class ModBlockTags extends BlockTagsProvider
         pickaxe(ModBlocks.LABORATORY_TILES.get());
         pickaxe(ModBlocks.LABORATORY_TILES_CHECKER.get());
         pickaxe(ModBlocks.LABORATORY_TILES_FLOOR.get());
+        pickaxe(ModBlocks.LABORATORY_VENTS.get());
+        pickaxe(ModBlocks.LABORATORY_INFOCON.get());
+        pickaxe(ModBlocks.LABORATORY_DIRECTION_UPRIGHT.get());
+        pickaxe(ModBlocks.LABORATORY_DIRECTION_DOWNLEFT.get());
 
         pickaxe(ModBlocks.TECHNICAL_CAUTION_TAPE.get());
 

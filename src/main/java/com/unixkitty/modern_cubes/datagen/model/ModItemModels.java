@@ -23,6 +23,7 @@ public class ModItemModels extends ItemModelProvider
         copyChiselBlock(ModBlocks.LABORATORY_STEEL_LARGE.get());
         copyChiselBlock(ModBlocks.LABORATORY_STEEL_SMALL.get());
         copyChiselBlock(ModBlocks.LABORATORY_PANEL.get());
+        copyChiselBlock(ModBlocks.LABORATORY_PANEL_DOTTED.get());
         copyChiselBlock(ModBlocks.LABORATORY_ROUNDEL.get());
         copyChiselBlock(ModBlocks.LABORATORY_SCREEN_CLEAR.get());
         copyChiselBlock(ModBlocks.LABORATORY_SCREEN_FUZZY.get());
@@ -31,6 +32,10 @@ public class ModItemModels extends ItemModelProvider
         copyChiselBlock(ModBlocks.LABORATORY_TILES.get());
         copyChiselBlock(ModBlocks.LABORATORY_TILES_CHECKER.get());
         copyChiselBlock(ModBlocks.LABORATORY_TILES_FLOOR.get());
+        copyChiselBlock(ModBlocks.LABORATORY_VENTS.get());
+        copyChiselBlock(ModBlocks.LABORATORY_INFOCON.get());
+        copyChiselBlock(ModBlocks.LABORATORY_DIRECTION_UPRIGHT.get());
+        copyChiselBlock(ModBlocks.LABORATORY_DIRECTION_DOWNLEFT.get());
 
         copyChiselBlock(ModBlocks.TECHNICAL_CAUTION_TAPE.get());
 

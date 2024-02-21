@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "modern_cubes:block/chisel/laboratory/laboratory_tile_plain_ctm",
+    "side": "modern_cubes:block/chisel/laboratory/laboratory_infocon"
+  }
+}
