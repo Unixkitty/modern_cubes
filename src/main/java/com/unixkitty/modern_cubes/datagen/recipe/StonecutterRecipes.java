@@ -23,6 +23,66 @@ public class StonecutterRecipes extends RecipeProvider
     @Override
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer)
     {
+        simpleAmount(ModBlocks.LABORATORY_STEEL_SMALL_SLAB.get(), 2, ModBlocks.LABORATORY_STEEL_SMALL.get(), consumer);
+
+        categoryItem(Items.IRON_INGOT, consumer,
+                ModBlocks.LABORATORY_TILE_PLAIN.get(),
+                ModBlocks.LABORATORY_TILE_PLAIN_CTM.get(),
+                ModBlocks.LABORATORY_STEEL_LARGE.get(),
+                ModBlocks.LABORATORY_STEEL_SMALL.get(),
+                ModBlocks.LABORATORY_PANEL.get(),
+                ModBlocks.LABORATORY_ROUNDEL.get(),
+                ModBlocks.LABORATORY_SCREEN_CLEAR.get(),
+                ModBlocks.LABORATORY_SCREEN_FUZZY.get(),
+                ModBlocks.LABORATORY_TILES.get(),
+                ModBlocks.LABORATORY_TILES_CHECKER.get(),
+                ModBlocks.LABORATORY_TILES_FLOOR.get()
+        );
+
+        simple(ModBlocks.TECHNICAL_CAUTION_TAPE.get(), Items.IRON_INGOT, consumer);
+
+        categoryItem(Items.IRON_INGOT, consumer,
+                ModBlocks.TYRIAN_BLACK.get(),
+                ModBlocks.TYRIAN_BLACK_ALT.get(),
+                ModBlocks.TYRIAN_BLUE_PLATING.get(),
+                ModBlocks.TYRIAN_DENT.get(),
+                ModBlocks.TYRIAN_DIAGONAL.get(),
+                ModBlocks.TYRIAN_ELABORATE.get(),
+                ModBlocks.TYRIAN_PLATE.get(),
+                ModBlocks.TYRIAN_PLATE_TILE.get(),
+                ModBlocks.TYRIAN_PLATE_TILE_CTM.get(),
+                ModBlocks.TYRIAN_TILES.get()
+        );
+
+        categoryItem(Items.COPPER_INGOT, consumer,
+                ModBlocks.FACTORY_DOTS.get(),
+                ModBlocks.FACTORY_DOTS_LIGHT.get(),
+                ModBlocks.FACTORY_HAZARD.get(),
+                ModBlocks.FACTORY_HAZARD_ORANGE.get(),
+                ModBlocks.FACTORY_RUST.get(),
+                ModBlocks.FACTORY_WIREFRAME.get(),
+                ModBlocks.FACTORY_WIREFRAME_WHITE.get()
+        );
+
+        categoryItem(Items.IRON_INGOT, consumer,
+                ModBlocks.HEX_BLACK.get(),
+                ModBlocks.HEX_BLUE.get(),
+                ModBlocks.HEX_BROWN.get(),
+                ModBlocks.HEX_CYAN.get(),
+                ModBlocks.HEX_GRAY.get(),
+                ModBlocks.HEX_GREEN.get(),
+                ModBlocks.HEX_LIGHT_BLUE.get(),
+                ModBlocks.HEX_LIGHT_GRAY.get(),
+                ModBlocks.HEX_LIME.get(),
+                ModBlocks.HEX_MAGENTA.get(),
+                ModBlocks.HEX_ORANGE.get(),
+                ModBlocks.HEX_PINK.get(),
+                ModBlocks.HEX_PURPLE.get(),
+                ModBlocks.HEX_RED.get(),
+                ModBlocks.HEX_WHITE.get(),
+                ModBlocks.HEX_YELLOW.get()
+        );
+
         category(Items.IRON_BLOCK, consumer,
                 ModBlocks.SPACE_PLATING_INSET.get(),
                 ModBlocks.SPACE_PLATING_RIVETS.get(),
@@ -65,7 +125,7 @@ public class StonecutterRecipes extends RecipeProvider
                 ModBlocks.CONCRETE_SIMPLE_TILE.get()
         );
 
-        category(Items.COPPER_BLOCK, consumer,
+        categoryItem(Items.COPPER_INGOT, consumer,
                 ModBlocks.CEILING_PLATE.get(),
                 ModBlocks.CEILING_TILE.get(),
                 ModBlocks.FLOOR_PLATE.get(),
@@ -79,7 +139,7 @@ public class StonecutterRecipes extends RecipeProvider
                 ModBlocks.PLATING_TITANIUM_STEEL.get()
         );
 
-        category(Items.COPPER_BLOCK, consumer,
+        categoryItem(Items.COPPER_INGOT, consumer,
                 ModBlocks.SHEETMETAL_ALUMINUM.get(),
                 ModBlocks.SHEETMETAL_COPPER.get(),
                 ModBlocks.SHEETMETAL_GOLD.get(),
@@ -93,7 +153,7 @@ public class StonecutterRecipes extends RecipeProvider
                 ModBlocks.SHEETMETAL_IRON_ALT.get()
         );
 
-        category(Items.COPPER_BLOCK, consumer,
+        categoryItem(Items.COPPER_INGOT, consumer,
                 ModBlocks.SOFT_PLATE_WHITE.get(),
                 ModBlocks.SOFT_PLATE_ORANGE.get(),
                 ModBlocks.SOFT_PLATE_MAGENTA.get(),
@@ -134,7 +194,17 @@ public class StonecutterRecipes extends RecipeProvider
         simpleUndoable(ModBlocks.REINFORCED_GLASS_CTM.get(), ModBlocks.REINFORCED_GLASS.get(), consumer);
     }
 
-    //Make things craftable into each other, Chisel-style
+    private void categoryItem(ItemLike ingredient, Consumer<FinishedRecipe> consumer, ItemLike mainResult, ItemLike... results)
+    {
+        simple(mainResult, ingredient, consumer);
+
+        if (results != null && results.length > 0)
+        {
+            category(mainResult, consumer, results);
+        }
+    }
+
+    //This makes things craftable into each other, Chisel-style
     private void category(ItemLike ingredient, @NotNull Consumer<FinishedRecipe> consumer, ItemLike... results)
     {
         for (ItemLike result : results)

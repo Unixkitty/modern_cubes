@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "modern_cubes:factory_rust"
+  },
+  "result": "modern_cubes:factory_hazard_orange"
+}

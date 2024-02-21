@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "modern_cubes:block/chisel/laboratory/laboratory_screen_fuzzy"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "modern_cubes:block/chisel/laboratory/laboratory_steel_small_top",
+    "side": "modern_cubes:block/chisel/laboratory/laboratory_steel_small",
+    "top": "modern_cubes:block/chisel/laboratory/laboratory_steel_small_top"
+  }
+}

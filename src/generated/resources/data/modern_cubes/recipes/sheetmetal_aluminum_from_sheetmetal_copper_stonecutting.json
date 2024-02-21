@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "modern_cubes:sheetmetal_copper"
-  },
-  "result": "modern_cubes:sheetmetal_aluminum"
-}

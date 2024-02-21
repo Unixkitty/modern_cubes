@@ -19,6 +19,57 @@ public class ModItemModels extends ItemModelProvider
     @Override
     protected void registerModels()
     {
+        copyChiselBlock(ModBlocks.LABORATORY_STEEL_SMALL_SLAB.get());
+        copyChiselBlock(ModBlocks.LABORATORY_STEEL_LARGE.get());
+        copyChiselBlock(ModBlocks.LABORATORY_STEEL_SMALL.get());
+        copyChiselBlock(ModBlocks.LABORATORY_PANEL.get());
+        copyChiselBlock(ModBlocks.LABORATORY_ROUNDEL.get());
+        copyChiselBlock(ModBlocks.LABORATORY_SCREEN_CLEAR.get());
+        copyChiselBlock(ModBlocks.LABORATORY_SCREEN_FUZZY.get());
+        copyChiselBlock(ModBlocks.LABORATORY_TILE_PLAIN.get());
+        copyChiselBlock(ModBlocks.LABORATORY_TILE_PLAIN_CTM.get());
+        copyChiselBlock(ModBlocks.LABORATORY_TILES.get());
+        copyChiselBlock(ModBlocks.LABORATORY_TILES_CHECKER.get());
+        copyChiselBlock(ModBlocks.LABORATORY_TILES_FLOOR.get());
+
+        copyChiselBlock(ModBlocks.TECHNICAL_CAUTION_TAPE.get());
+
+        copyChiselBlock(ModBlocks.TYRIAN_BLACK.get());
+        copyChiselBlock(ModBlocks.TYRIAN_BLACK_ALT.get());
+        copyChiselBlock(ModBlocks.TYRIAN_BLUE_PLATING.get());
+        copyChiselBlock(ModBlocks.TYRIAN_DENT.get());
+        copyChiselBlock(ModBlocks.TYRIAN_DIAGONAL.get());
+        copyChiselBlock(ModBlocks.TYRIAN_ELABORATE.get());
+        copyChiselBlock(ModBlocks.TYRIAN_PLATE.get());
+        copyChiselBlock(ModBlocks.TYRIAN_PLATE_TILE.get());
+        copyChiselBlock(ModBlocks.TYRIAN_PLATE_TILE_CTM.get());
+        copyChiselBlock(ModBlocks.TYRIAN_TILES.get());
+
+        copyChiselBlock(ModBlocks.FACTORY_DOTS.get());
+        copyChiselBlock(ModBlocks.FACTORY_DOTS_LIGHT.get());
+        copyChiselBlock(ModBlocks.FACTORY_HAZARD.get());
+        copyChiselBlock(ModBlocks.FACTORY_HAZARD_ORANGE.get());
+        copyChiselBlock(ModBlocks.FACTORY_RUST.get());
+        copyChiselBlock(ModBlocks.FACTORY_WIREFRAME.get());
+        copyChiselBlock(ModBlocks.FACTORY_WIREFRAME_WHITE.get());
+
+        copyParent(ModBlocks.HEX_BLACK.get());
+        copyParent(ModBlocks.HEX_BLUE.get());
+        copyParent(ModBlocks.HEX_BROWN.get());
+        copyParent(ModBlocks.HEX_CYAN.get());
+        copyParent(ModBlocks.HEX_GRAY.get());
+        copyParent(ModBlocks.HEX_GREEN.get());
+        copyParent(ModBlocks.HEX_LIGHT_BLUE.get());
+        copyParent(ModBlocks.HEX_LIGHT_GRAY.get());
+        copyParent(ModBlocks.HEX_LIME.get());
+        copyParent(ModBlocks.HEX_MAGENTA.get());
+        copyParent(ModBlocks.HEX_ORANGE.get());
+        copyParent(ModBlocks.HEX_PINK.get());
+        copyParent(ModBlocks.HEX_PURPLE.get());
+        copyParent(ModBlocks.HEX_RED.get());
+        copyParent(ModBlocks.HEX_WHITE.get());
+        copyParent(ModBlocks.HEX_YELLOW.get());
+
         copyParent(ModBlocks.SPACE_PLATING_INSET.get());
         copyParent(ModBlocks.SPACE_PLATING_RIVETS.get());
         copyParent(ModBlocks.SPACE_PLATING_STRIPE_BLACK.get());
@@ -128,12 +179,22 @@ public class ModItemModels extends ItemModelProvider
 
     private void copyParent(Block block)
     {
-        copyDifferentParent(block, block);
+        copyDifferentParent(block, block, "");
+    }
+
+    private void copyChiselBlock(Block block)
+    {
+        copyDifferentParent(block, block, "chisel/" + block.asItem().toString().toLowerCase().split("_")[0] + "/");
+    }
+
+    private void copyDifferentParent(Block block, Block parentBlock)
+    {
+        copyDifferentParent(block, parentBlock, "");
     }
 
     @SuppressWarnings("ConstantConditions")
-    private void copyDifferentParent(Block block, Block parentBlock)
+    private void copyDifferentParent(Block block, Block parentBlock, String extraPath)
     {
-        withExistingParent(ForgeRegistries.ITEMS.getKey(block.asItem()).getPath(), modLoc("block/" + parentBlock.asItem().toString().toLowerCase()));
+        withExistingParent(ForgeRegistries.ITEMS.getKey(block.asItem()).getPath(), modLoc("block/" + extraPath + parentBlock.asItem().toString().toLowerCase()));
     }
 }

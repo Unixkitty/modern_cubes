@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "modern_cubes:laboratory_screen_fuzzy"
+  },
+  "result": "modern_cubes:laboratory_steel_small"
+}

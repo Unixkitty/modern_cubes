@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "modern_cubes:tyrian_tiles"
+  },
+  "result": "modern_cubes:tyrian_blue_plating"
+}

@@ -21,6 +21,57 @@ public class ModBlockStates extends BlockStateProvider
     @Override
     protected void registerStatesAndModels()
     {
+        customChiselAxisBlock((RotatedPillarBlock) ModBlocks.LABORATORY_STEEL_LARGE.get(), "laboratory");
+        customChiselAxisBlock((RotatedPillarBlock) ModBlocks.LABORATORY_STEEL_SMALL.get(), "laboratory");
+        customChiselSlab((SlabBlock) ModBlocks.LABORATORY_STEEL_SMALL_SLAB.get(), ModBlocks.LABORATORY_STEEL_SMALL.get(), "laboratory", "", "_top");
+        simpleChiselBlock(ModBlocks.LABORATORY_PANEL.get(), "laboratory");
+        simpleChiselBlock(ModBlocks.LABORATORY_ROUNDEL.get(), "laboratory");
+        simpleChiselBlock(ModBlocks.LABORATORY_SCREEN_CLEAR.get(), "laboratory");
+        simpleChiselBlock(ModBlocks.LABORATORY_SCREEN_FUZZY.get(), "laboratory");
+        simpleChiselBlock(ModBlocks.LABORATORY_TILE_PLAIN.get(), "laboratory");
+        simpleChiselBlock(ModBlocks.LABORATORY_TILE_PLAIN_CTM.get(), "laboratory");
+        simpleChiselBlock(ModBlocks.LABORATORY_TILES.get(), "laboratory");
+        simpleChiselBlock(ModBlocks.LABORATORY_TILES_CHECKER.get(), "laboratory");
+        simpleChiselBlock(ModBlocks.LABORATORY_TILES_FLOOR.get(), "laboratory");
+
+        simpleChiselBlock(ModBlocks.TECHNICAL_CAUTION_TAPE.get(), "technical");
+
+        simpleChiselBlock(ModBlocks.TYRIAN_BLACK.get(), "tyrian");
+        simpleChiselBlock(ModBlocks.TYRIAN_BLACK_ALT.get(), "tyrian");
+        simpleChiselBlock(ModBlocks.TYRIAN_BLUE_PLATING.get(), "tyrian");
+        simpleChiselBlock(ModBlocks.TYRIAN_DENT.get(), "tyrian");
+        simpleChiselBlock(ModBlocks.TYRIAN_DIAGONAL.get(), "tyrian");
+        simpleChiselBlock(ModBlocks.TYRIAN_ELABORATE.get(), "tyrian");
+        simpleChiselBlock(ModBlocks.TYRIAN_PLATE.get(), "tyrian");
+        simpleChiselBlock(ModBlocks.TYRIAN_PLATE_TILE.get(), "tyrian");
+        simpleChiselBlock(ModBlocks.TYRIAN_PLATE_TILE_CTM.get(), "tyrian");
+        simpleChiselBlock(ModBlocks.TYRIAN_TILES.get(), "tyrian");
+
+        simpleChiselBlock(ModBlocks.FACTORY_DOTS.get(), "factory");
+        simpleChiselBlock(ModBlocks.FACTORY_DOTS_LIGHT.get(), "factory");
+        simpleChiselBlock(ModBlocks.FACTORY_HAZARD.get(), "factory");
+        simpleChiselBlock(ModBlocks.FACTORY_HAZARD_ORANGE.get(), "factory");
+        simpleChiselBlock(ModBlocks.FACTORY_RUST.get(), "factory");
+        simpleChiselBlock(ModBlocks.FACTORY_WIREFRAME.get(), "factory");
+        simpleChiselBlock(ModBlocks.FACTORY_WIREFRAME_WHITE.get(), "factory");
+
+        simpleBlock(ModBlocks.HEX_BLACK.get());
+        simpleBlock(ModBlocks.HEX_BLUE.get());
+        simpleBlock(ModBlocks.HEX_BROWN.get());
+        simpleBlock(ModBlocks.HEX_CYAN.get());
+        simpleBlock(ModBlocks.HEX_GRAY.get());
+        simpleBlock(ModBlocks.HEX_GREEN.get());
+        simpleBlock(ModBlocks.HEX_LIGHT_BLUE.get());
+        simpleBlock(ModBlocks.HEX_LIGHT_GRAY.get());
+        simpleBlock(ModBlocks.HEX_LIME.get());
+        simpleBlock(ModBlocks.HEX_MAGENTA.get());
+        simpleBlock(ModBlocks.HEX_ORANGE.get());
+        simpleBlock(ModBlocks.HEX_PINK.get());
+        simpleBlock(ModBlocks.HEX_PURPLE.get());
+        simpleBlock(ModBlocks.HEX_RED.get());
+        simpleBlock(ModBlocks.HEX_WHITE.get());
+        simpleBlock(ModBlocks.HEX_YELLOW.get());
+
         customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_INSET.get());
         customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_RIVETS.get());
         customAxisBlockSingle((RotatedPillarBlock) ModBlocks.SPACE_PLATING_STRIPE_BLACK.get());
@@ -46,7 +97,7 @@ public class ModBlockStates extends BlockStateProvider
         simpleBlock(ModBlocks.SPACE_PLATING.get());
         simpleBlock(ModBlocks.SPACE_PLATING_SQUARE.get());
 
-        customTrapdoor((TrapDoorBlock)ModBlocks.SPACE_PLATING_HATCH.get());
+        customTrapdoor((TrapDoorBlock) ModBlocks.SPACE_PLATING_HATCH.get());
 
         simpleBlock(ModBlocks.ASPHALT_PLAIN.get());
         simpleBlock(ModBlocks.CONCRETE_PAVER.get());
@@ -123,12 +174,37 @@ public class ModBlockStates extends BlockStateProvider
         simpleCutoutBlock(ModBlocks.REINFORCED_GLASS_CTM.get());
     }
 
+    private ResourceLocation chiselResource(Block block, String typeString)
+    {
+        return new ResourceLocation(ModernCubes.MODID, "block/chisel/" + typeString + "/" + block.asItem().toString().toLowerCase());
+    }
+
+    private void simpleChiselBlock(Block block, String typeString)
+    {
+        ResourceLocation resourceLocation = chiselResource(block, typeString);
+
+        simpleBlock(block, models().cubeAll(resourceLocation.getPath(), resourceLocation));
+    }
+
     private void customTrapdoor(TrapDoorBlock block)
     {
         trapdoorBlock(block, blockTexture(block), true);
     }
 
-    public void customSlab(SlabBlock slabBlock, Block fullBlock) {
+    public void customChiselSlab(SlabBlock slabBlock, Block fullBlock, String typeString, String side_suffix, String top_suffix)
+    {
+        ResourceLocation fullBlockTexture = chiselResource(fullBlock, typeString);
+        ResourceLocation sideBlockTexture = extendBlockTexture(fullBlockTexture, side_suffix);
+        ResourceLocation topBlockTexture = extendBlockTexture(fullBlockTexture, top_suffix);
+
+        slabBlock(slabBlock,
+                models().slab(chiselResource(slabBlock, typeString).getPath(), sideBlockTexture, topBlockTexture, topBlockTexture),
+                models().slabTop(extendBlockTexture(chiselResource(slabBlock, typeString), top_suffix).getPath(), sideBlockTexture, topBlockTexture, topBlockTexture),
+                models().getExistingFile(sideBlockTexture));
+    }
+
+    public void customSlab(SlabBlock slabBlock, Block fullBlock)
+    {
         ResourceLocation fullBlockTexture = blockTexture(fullBlock);
 
         slabBlock(slabBlock, fullBlockTexture, extendBlockTexture(fullBlockTexture, "_slab_side"), fullBlockTexture, fullBlockTexture);
@@ -157,6 +233,15 @@ public class ModBlockStates extends BlockStateProvider
     private void customAxisBlock(RotatedPillarBlock block)
     {
         customAxisBlock(block, block);
+    }
+
+    private void customChiselAxisBlock(RotatedPillarBlock block, String typeString)
+    {
+        ResourceLocation resourceLocation = chiselResource(block, typeString);
+
+        axisBlock(block,
+                models().cubeColumn(resourceLocation.getPath(), resourceLocation, extendBlockTexture(resourceLocation, "_top")),
+                models().cubeColumnHorizontal(resourceLocation.getPath() + "_horizontal", resourceLocation, extendBlockTexture(resourceLocation, "_top")));
     }
 
     private void customAxisBlock(RotatedPillarBlock block, Block blockTop)

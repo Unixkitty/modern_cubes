@@ -1,0 +1,9 @@
+{
+    "ctm": {
+        "ctm_version": 1,
+        "type": "ctm",
+        "textures": [
+            "modern_cubes:block/chisel/laboratory/laboratory_screen_fuzzy-ctm"
+        ]
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "modern_cubes:hex_light_blue"
+  },
+  "result": "modern_cubes:hex_brown"
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modern_cubes:block/chisel/laboratory/laboratory_steel_small_slab"
+    },
+    "type=double": {
+      "model": "modern_cubes:block/chisel/laboratory/laboratory_steel_small"
+    },
+    "type=top": {
+      "model": "modern_cubes:block/chisel/laboratory/laboratory_steel_small_slab_top"
+    }
+  }
+}

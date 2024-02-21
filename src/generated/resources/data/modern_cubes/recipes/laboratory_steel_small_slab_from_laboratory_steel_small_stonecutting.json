@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "modern_cubes:laboratory_steel_small"
+  },
+  "result": "modern_cubes:laboratory_steel_small_slab"
+}

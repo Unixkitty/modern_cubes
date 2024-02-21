@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "modern_cubes:factory_dots"
+  },
+  "result": "modern_cubes:factory_rust"
+}

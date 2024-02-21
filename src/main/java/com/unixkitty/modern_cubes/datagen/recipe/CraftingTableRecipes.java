@@ -22,6 +22,9 @@ public class CraftingTableRecipes extends RecipeProvider
     @Override
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer)
     {
+        craftSlabs(ModBlocks.LABORATORY_STEEL_SMALL.get(), ModBlocks.LABORATORY_STEEL_SMALL_SLAB.get(), consumer);
+        uncraftSlabs(ModBlocks.LABORATORY_STEEL_SMALL.get(), ModBlocks.LABORATORY_STEEL_SMALL_SLAB.get(), consumer);
+
         craftSlabs(ModBlocks.CONCRETE_PAVER.get(), ModBlocks.CONCRETE_PAVER_SLAB.get(), consumer);
         craftSlabs(ModBlocks.CONCRETE_SIMPLE_TILE.get(), ModBlocks.CONCRETE_SIMPLE_TILE_SLAB.get(), consumer);
         uncraftSlabs(ModBlocks.CONCRETE_PAVER.get(), ModBlocks.CONCRETE_PAVER_SLAB.get(), consumer);

@@ -16,6 +16,57 @@ public class ModLanguageProvider extends LanguageProvider
     @Override
     protected void addTranslations()
     {
+        add(ModBlocks.LABORATORY_STEEL_SMALL_SLAB.get(), "Laboratory Small Steel Slab");
+        add(ModBlocks.LABORATORY_STEEL_LARGE.get(), "Laboratory Large Steel");
+        add(ModBlocks.LABORATORY_STEEL_SMALL.get(), "Laboratory Small Steel");
+        add(ModBlocks.LABORATORY_PANEL.get(), "Laboratory Panel");
+        add(ModBlocks.LABORATORY_ROUNDEL.get(), "Laboratory Roundel");
+        add(ModBlocks.LABORATORY_SCREEN_CLEAR.get(), "Clear Laboratory Screen");
+        add(ModBlocks.LABORATORY_SCREEN_FUZZY.get(), "Fuzzy Laboratory Screen");
+        add(ModBlocks.LABORATORY_TILE_PLAIN.get(), "Plain Laboratory Tile");
+        add(ModBlocks.LABORATORY_TILE_PLAIN_CTM.get(), "Plain Laboratory Tile (CTM)");
+        add(ModBlocks.LABORATORY_TILES.get(), "Laboratory Tiles");
+        add(ModBlocks.LABORATORY_TILES_CHECKER.get(), "Laboratory Checker Tiles");
+        add(ModBlocks.LABORATORY_TILES_FLOOR.get(), "Laboratory Floor Tiles");
+
+        add(ModBlocks.TECHNICAL_CAUTION_TAPE.get(), "Caution Tape");
+
+        add(ModBlocks.TYRIAN_BLACK.get(), "Black Tyrian");
+        add(ModBlocks.TYRIAN_BLACK_ALT.get(), "Black Tyrian (Alternate)");
+        add(ModBlocks.TYRIAN_BLUE_PLATING.get(), "Blue Tyrian Plating");
+        add(ModBlocks.TYRIAN_DENT.get(), "Tyrian Dent");
+        add(ModBlocks.TYRIAN_DIAGONAL.get(), "Diagonal Tyrian");
+        add(ModBlocks.TYRIAN_ELABORATE.get(), "Elaborate Tyrian");
+        add(ModBlocks.TYRIAN_PLATE.get(), "Tyrian Plate");
+        add(ModBlocks.TYRIAN_PLATE_TILE.get(), "Tyrian Plate Tile");
+        add(ModBlocks.TYRIAN_PLATE_TILE_CTM.get(), "Tyrian Plate Tile (CTM)");
+        add(ModBlocks.TYRIAN_TILES.get(), "Tyrian Tiles");
+
+        add(ModBlocks.FACTORY_DOTS.get(), "Factory Dots");
+        add(ModBlocks.FACTORY_DOTS_LIGHT.get(), "Light Factory Dots");
+        add(ModBlocks.FACTORY_HAZARD.get(), "Factory Hazard");
+        add(ModBlocks.FACTORY_HAZARD_ORANGE.get(), "Orange Factory Hazard");
+        add(ModBlocks.FACTORY_RUST.get(), "Factory Rust");
+        add(ModBlocks.FACTORY_WIREFRAME.get(), "Factory Wireframe");
+        add(ModBlocks.FACTORY_WIREFRAME_WHITE.get(), "White Factory Wireframe");
+
+        add(ModBlocks.HEX_BLACK.get(), "Black Hex");
+        add(ModBlocks.HEX_BLUE.get(), "Blue Hex");
+        add(ModBlocks.HEX_BROWN.get(), "Brown Hex");
+        add(ModBlocks.HEX_CYAN.get(), "Cyan Hex");
+        add(ModBlocks.HEX_GRAY.get(), "Gray Hex");
+        add(ModBlocks.HEX_GREEN.get(), "Green Hex");
+        add(ModBlocks.HEX_LIGHT_BLUE.get(), "Light Blue Hex");
+        add(ModBlocks.HEX_LIGHT_GRAY.get(), "Light Gray Hex");
+        add(ModBlocks.HEX_LIME.get(), "Lime Hex");
+        add(ModBlocks.HEX_MAGENTA.get(), "Magenta Hex");
+        add(ModBlocks.HEX_ORANGE.get(), "Orange Hex");
+        add(ModBlocks.HEX_PINK.get(), "Pink Hex");
+        add(ModBlocks.HEX_PURPLE.get(), "Purple Hex");
+        add(ModBlocks.HEX_RED.get(), "Red Hex");
+        add(ModBlocks.HEX_WHITE.get(), "White Hex");
+        add(ModBlocks.HEX_YELLOW.get(), "Yellow Hex");
+
         add(ModBlocks.SPACE_PLATING_INSET.get(), "Space Plating Inset");
         add(ModBlocks.SPACE_PLATING_RIVETS.get(), "Space Plating Rivets");
         add(ModBlocks.SPACE_PLATING_STRIPE_BLACK.get(), "Space Plating Black Stripe");
@@ -95,7 +146,7 @@ public class ModLanguageProvider extends LanguageProvider
         add(ModBlocks.SOFT_PLATE_RED.get(), "Soft Red Plate");
         add(ModBlocks.SOFT_PLATE_BLACK.get(), "Soft Black Plate");
 
-        add(ModBlocks.STEEL_DOOR.get(), "Blue Steel Door");
+        add(ModBlocks.STEEL_DOOR.get(), "Steel Door");
         add(ModBlocks.STRONG_DOOR.get(), "Strong Door");
         add(ModBlocks.STURDY_RUSTY_DOOR.get(), "Sturdy Rusty Door");
         add(ModBlocks.STURDY_STEEL_DOOR.get(), "Sturdy Steel Door");
