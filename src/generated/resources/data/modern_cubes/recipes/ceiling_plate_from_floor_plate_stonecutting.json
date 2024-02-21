@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "modern_cubes:floor_plate"
+  },
+  "result": "modern_cubes:ceiling_plate"
+}

@@ -119,7 +119,8 @@ public final class ModBlocks
         {
             pState = pState.cycle(OPEN);
             pLevel.setBlock(pPos, pState, 2);
-            if (pState.getValue(WATERLOGGED)) {
+            if (pState.getValue(WATERLOGGED))
+            {
                 pLevel.scheduleTick(pPos, Fluids.WATER, Fluids.WATER.getTickDelay(pLevel));
             }
 
@@ -249,12 +250,12 @@ public final class ModBlocks
     {
         return () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).destroyTime(Blocks.STONE.defaultDestroyTime()));
     }
-    
+
     private static Supplier<? extends Block> doorBlock()
     {
         return () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_DOOR));
     }
-    
+
     private static Supplier<? extends Block> openableMetalDoorBlock()
     {
         return () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_DOOR))

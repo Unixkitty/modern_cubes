@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "modern_cubes:concrete_paver"
+  },
+  "result": "minecraft:gray_concrete"
+}

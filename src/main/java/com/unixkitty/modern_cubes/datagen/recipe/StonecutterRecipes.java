@@ -214,16 +214,17 @@ public class StonecutterRecipes extends RecipeProvider
     {
         for (ItemLike result : results)
         {
-            simple(result, ingredient, consumer);
+            simpleUndoable(result, ingredient, consumer);
         }
 
         for (int i = 0; i < results.length; i++)
         {
             for (int j = 0; j < results.length; j++)
             {
-                if (i == j) continue;
-
-                simple(results[j], results[i], consumer);
+                if (i != j)
+                {
+                    simple(results[j], results[i], consumer);
+                }
             }
         }
     }
