@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:beam_from_iron_ingot_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

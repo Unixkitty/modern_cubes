@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:beam_bolts_from_beam_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "modern_cubes:space_plating_hatch"
+              "modern_cubes:blue_steel_door_glass"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "modern_cubes:iron_trapdoor_from_space_plating_hatch_stonecutting"
+        "recipe": "modern_cubes:iron_door_from_blue_steel_door_glass_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,8 @@
   ],
   "rewards": {
     "recipes": [
-      "modern_cubes:iron_trapdoor_from_space_plating_hatch_stonecutting"
+      "modern_cubes:iron_door_from_blue_steel_door_glass_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

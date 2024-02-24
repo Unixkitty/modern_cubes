@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:soft_plate_cyan_from_soft_plate_pink_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

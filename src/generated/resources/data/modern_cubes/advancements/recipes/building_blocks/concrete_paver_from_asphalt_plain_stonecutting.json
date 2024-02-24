@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:concrete_paver_from_asphalt_plain_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

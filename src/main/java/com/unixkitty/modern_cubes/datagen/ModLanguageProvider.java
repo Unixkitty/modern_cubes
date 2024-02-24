@@ -2,15 +2,15 @@ package com.unixkitty.modern_cubes.datagen;
 
 import com.unixkitty.modern_cubes.ModBlocks;
 import com.unixkitty.modern_cubes.ModernCubes;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
 public class ModLanguageProvider extends LanguageProvider
 {
 
-    public ModLanguageProvider(DataGenerator gen, String locale)
+    public ModLanguageProvider(PackOutput output, String locale)
     {
-        super(gen, ModernCubes.MODID, locale);
+        super(output, ModernCubes.MODID, locale);
     }
 
     @Override

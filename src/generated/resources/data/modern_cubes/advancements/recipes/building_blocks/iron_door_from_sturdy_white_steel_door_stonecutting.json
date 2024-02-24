@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "modern_cubes:warning_white_steel_door"
+              "modern_cubes:sturdy_white_steel_door"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "modern_cubes:iron_door_from_warning_white_steel_door_stonecutting"
+        "recipe": "modern_cubes:iron_door_from_sturdy_white_steel_door_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,8 @@
   ],
   "rewards": {
     "recipes": [
-      "modern_cubes:iron_door_from_warning_white_steel_door_stonecutting"
+      "modern_cubes:iron_door_from_sturdy_white_steel_door_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

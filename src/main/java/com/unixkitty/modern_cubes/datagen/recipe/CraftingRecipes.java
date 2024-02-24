@@ -2,26 +2,53 @@ package com.unixkitty.modern_cubes.datagen.recipe;
 
 import com.unixkitty.modern_cubes.ModBlocks;
 import com.unixkitty.modern_cubes.ModernCubes;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.SingleItemRecipeBuilder;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
-public class StonecutterRecipes extends RecipeProvider
+public class CraftingRecipes extends RecipeProvider
 {
-    public StonecutterRecipes(DataGenerator generatorIn)
+    public CraftingRecipes(PackOutput output)
     {
-        super(generatorIn);
+        super(output);
     }
 
     @Override
-    protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer)
+    protected void buildRecipes(@NotNull Consumer<FinishedRecipe> consumer)
+    {
+        buildCraftingTableRecipes(consumer);
+        buildStonecutterRecipes(consumer);
+    }
+
+    private void buildCraftingTableRecipes(@NotNull Consumer<FinishedRecipe> consumer)
+    {
+        craftSlabs(ModBlocks.LABORATORY_STEEL_SMALL.get(), ModBlocks.LABORATORY_STEEL_SMALL_SLAB.get(), consumer);
+        uncraftSlabs(ModBlocks.LABORATORY_STEEL_SMALL.get(), ModBlocks.LABORATORY_STEEL_SMALL_SLAB.get(), consumer);
+
+        craftSlabs(ModBlocks.CONCRETE_PAVER.get(), ModBlocks.CONCRETE_PAVER_SLAB.get(), consumer);
+        craftSlabs(ModBlocks.CONCRETE_SIMPLE_TILE.get(), ModBlocks.CONCRETE_SIMPLE_TILE_SLAB.get(), consumer);
+        uncraftSlabs(ModBlocks.CONCRETE_PAVER.get(), ModBlocks.CONCRETE_PAVER_SLAB.get(), consumer);
+        uncraftSlabs(ModBlocks.CONCRETE_SIMPLE_TILE.get(), ModBlocks.CONCRETE_SIMPLE_TILE_SLAB.get(), consumer);
+
+        //Reinforced Glass
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.REINFORCED_GLASS.get().asItem(), 16)
+                .define('i', Tags.Items.INGOTS_IRON)
+                .define('G', Tags.Items.GLASS_COLORLESS)
+                .define('O', Tags.Items.OBSIDIAN)
+                .pattern("iGi")
+                .pattern("GOG")
+                .pattern("iGi")
+                .unlockedBy("has_item", has(Tags.Items.OBSIDIAN))
+                .save(consumer);
+    }
+
+    private void buildStonecutterRecipes(@NotNull Consumer<FinishedRecipe> consumer)
     {
         simpleAmount(ModBlocks.LABORATORY_STEEL_SMALL_SLAB.get(), 2, ModBlocks.LABORATORY_STEEL_SMALL.get(), consumer);
 
@@ -199,6 +226,26 @@ public class StonecutterRecipes extends RecipeProvider
         simpleUndoable(ModBlocks.REINFORCED_GLASS_CTM.get(), ModBlocks.REINFORCED_GLASS.get(), consumer);
     }
 
+    private void craftSlabs(ItemLike sourceBlock, ItemLike slabsBlock, @NotNull Consumer<FinishedRecipe> consumer)
+    {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, slabsBlock, 6)
+                .define('B', sourceBlock)
+                .pattern("BBB")
+                .unlockedBy("has_item", has(sourceBlock))
+                .save(consumer, ModernCubes.MODID + ":slabs_from_" + sourceBlock.asItem());
+    }
+
+    private void uncraftSlabs(ItemLike sourceBlock, ItemLike slabsBlock, @NotNull Consumer<FinishedRecipe> consumer)
+    {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, sourceBlock)
+                .define('S', slabsBlock)
+                .pattern("S")
+                .pattern("S")
+                .unlockedBy("has_item", has(sourceBlock))
+                .save(consumer, ModernCubes.MODID + ":slabs_to_" + sourceBlock.asItem());
+    }
+
+    //Stonecutter recipe methods
     private void categoryItem(ItemLike ingredient, Consumer<FinishedRecipe> consumer, ItemLike mainResult, ItemLike... results)
     {
         simple(mainResult, ingredient, consumer);
@@ -242,7 +289,7 @@ public class StonecutterRecipes extends RecipeProvider
 
     private void simpleAmount(ItemLike result, int amount, ItemLike ingredient, @NotNull Consumer<FinishedRecipe> consumer)
     {
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ingredient), result, amount)
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ingredient), RecipeCategory.BUILDING_BLOCKS, result, amount)
                 .unlockedBy("has_item", has(ingredient))
                 .save(consumer, ModernCubes.MODID + ":" + result.asItem().toString().toLowerCase() + "_from_" + ingredient.asItem().toString().toLowerCase() + "_stonecutting");
     }

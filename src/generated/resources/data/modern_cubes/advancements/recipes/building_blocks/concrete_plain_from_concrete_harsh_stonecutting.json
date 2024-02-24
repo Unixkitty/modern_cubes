@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:concrete_plain_from_concrete_harsh_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -28,5 +28,6 @@
     "recipes": [
       "modern_cubes:reinforced_glass"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

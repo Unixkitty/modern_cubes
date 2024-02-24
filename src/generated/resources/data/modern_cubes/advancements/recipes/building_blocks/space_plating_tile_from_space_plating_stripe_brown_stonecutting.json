@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:space_plating_tile_from_space_plating_stripe_brown_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

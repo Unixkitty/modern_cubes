@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:floor_plate_light_from_plating_lead_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

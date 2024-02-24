@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "modern_cubes:steel_door"
+              "modern_cubes:strong_door"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "modern_cubes:iron_door_from_steel_door_stonecutting"
+        "recipe": "modern_cubes:iron_door_from_strong_door_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,8 @@
   ],
   "rewards": {
     "recipes": [
-      "modern_cubes:iron_door_from_steel_door_stonecutting"
+      "modern_cubes:iron_door_from_strong_door_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

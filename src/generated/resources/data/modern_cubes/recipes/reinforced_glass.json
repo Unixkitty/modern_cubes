@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "G": {
       "tag": "forge:glass/colorless"
@@ -19,5 +20,6 @@
   "result": {
     "count": 16,
     "item": "modern_cubes:reinforced_glass"
-  }
+  },
+  "show_notification": true
 }

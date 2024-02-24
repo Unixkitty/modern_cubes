@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:laboratory_tiles_checker_from_laboratory_tiles_floor_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

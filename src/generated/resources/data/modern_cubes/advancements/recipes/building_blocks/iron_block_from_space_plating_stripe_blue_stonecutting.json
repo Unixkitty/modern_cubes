@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:iron_block_from_space_plating_stripe_blue_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

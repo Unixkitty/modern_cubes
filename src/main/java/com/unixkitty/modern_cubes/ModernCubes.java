@@ -1,8 +1,14 @@
 package com.unixkitty.modern_cubes;
 
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.Objects;
 
 @Mod(ModernCubes.MODID)
 public class ModernCubes
@@ -19,5 +25,21 @@ public class ModernCubes
 
         ModBlocks.BLOCKS.register(modEventBus);
         ModBlocks.ITEMS.register(modEventBus);
+
+        modEventBus.addListener(this::onBuildCreativeTabs);
+    }
+
+    private void onBuildCreativeTabs(BuildCreativeModeTabContentsEvent event)
+    {
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+        {
+            for (Block block : ForgeRegistries.BLOCKS)
+            {
+                if (ModernCubes.MODID.equals(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getNamespace()))
+                {
+                    event.accept(block);
+                }
+            }
+        }
     }
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:space_plating_stripe_light_gray_from_space_plating_stripe_magenta_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

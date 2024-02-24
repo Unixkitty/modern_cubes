@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:concrete_paver_slab_from_concrete_paver_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

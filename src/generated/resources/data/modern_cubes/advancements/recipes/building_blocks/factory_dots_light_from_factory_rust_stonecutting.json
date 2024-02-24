@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:factory_dots_light_from_factory_rust_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

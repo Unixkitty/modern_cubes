@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:factory_hazard_from_factory_wireframe_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

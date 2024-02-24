@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:technical_caution_tape_from_iron_ingot_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

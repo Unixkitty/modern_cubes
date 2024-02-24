@@ -1,7 +1,7 @@
 package com.unixkitty.modern_cubes.datagen.loot;
 
 import com.unixkitty.modern_cubes.ModernCubes;
-import net.minecraft.data.loot.BlockLoot;
+import net.minecraft.data.loot.packs.VanillaBlockLoot;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -13,12 +13,12 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-public class ModBlockLootTables extends BlockLoot
+public class ModBlockLootTables extends VanillaBlockLoot
 {
     private final Set<Block> knownBlocks = new HashSet<>();
 
     @Override
-    protected void addTables()
+    protected void generate()
     {
         for (Block block : ForgeRegistries.BLOCKS)
         {
@@ -26,15 +26,15 @@ public class ModBlockLootTables extends BlockLoot
             {
                 if (block instanceof DoorBlock)
                 {
-                    add(block, BlockLoot::createDoorTable);
+                    add(block, this::createDoorTable);
                 }
                 else if (block instanceof SlabBlock)
                 {
-                    add(block, BlockLoot::createSlabItemTable);
+                    add(block, this::createSlabItemTable);
                 }
                 else
                 {
-                    add(block, BlockLoot::createSingleItemTable);
+                    add(block, this::createSingleItemTable);
                 }
             }
         }

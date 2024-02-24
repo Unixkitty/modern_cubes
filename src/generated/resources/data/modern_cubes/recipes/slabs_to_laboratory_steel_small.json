@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "S": {
       "item": "modern_cubes:laboratory_steel_small_slab"
@@ -11,5 +12,6 @@
   ],
   "result": {
     "item": "modern_cubes:laboratory_steel_small"
-  }
+  },
+  "show_notification": true
 }

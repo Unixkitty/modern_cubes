@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:laboratory_roundel_from_laboratory_tiles_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

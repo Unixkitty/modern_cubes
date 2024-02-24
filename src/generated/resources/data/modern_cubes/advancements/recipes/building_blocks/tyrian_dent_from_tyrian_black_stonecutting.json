@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:tyrian_dent_from_tyrian_black_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:slabs_to_concrete_simple_tile"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

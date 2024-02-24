@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:tyrian_plate_tile_from_tyrian_elaborate_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

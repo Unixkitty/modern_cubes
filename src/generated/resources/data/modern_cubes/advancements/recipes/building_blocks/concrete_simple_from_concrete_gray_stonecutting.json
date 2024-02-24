@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:concrete_simple_from_concrete_gray_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

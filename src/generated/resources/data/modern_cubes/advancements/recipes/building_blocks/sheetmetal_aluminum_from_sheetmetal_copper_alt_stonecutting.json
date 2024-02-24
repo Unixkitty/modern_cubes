@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:sheetmetal_aluminum_from_sheetmetal_copper_alt_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

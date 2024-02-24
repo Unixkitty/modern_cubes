@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:tyrian_black_from_tyrian_blue_plating_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -2,7 +2,7 @@ package com.unixkitty.modern_cubes.datagen.model;
 
 import com.unixkitty.modern_cubes.ModBlocks;
 import com.unixkitty.modern_cubes.ModernCubes;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -11,9 +11,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ModItemModels extends ItemModelProvider
 {
 
-    public ModItemModels(DataGenerator generator, ExistingFileHelper existingFileHelper)
+    public ModItemModels(PackOutput output, ExistingFileHelper existingFileHelper)
     {
-        super(generator, ModernCubes.MODID, existingFileHelper);
+        super(output, ModernCubes.MODID, existingFileHelper);
     }
 
     @Override

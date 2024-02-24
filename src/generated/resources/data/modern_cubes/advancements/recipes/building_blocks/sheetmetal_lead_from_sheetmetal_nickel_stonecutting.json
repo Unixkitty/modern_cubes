@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:sheetmetal_lead_from_sheetmetal_nickel_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

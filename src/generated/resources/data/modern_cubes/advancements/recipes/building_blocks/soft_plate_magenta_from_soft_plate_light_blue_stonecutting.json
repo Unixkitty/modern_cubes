@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:soft_plate_magenta_from_soft_plate_light_blue_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

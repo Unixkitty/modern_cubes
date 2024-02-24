@@ -1,25 +1,14 @@
 package com.unixkitty.modern_cubes;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
-import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
@@ -112,22 +101,7 @@ public final class ModBlocks
     public static final RegistryObject<Block> SPACE_PLATING = register("space_plating", basicMetalBlock());
     public static final RegistryObject<Block> SPACE_PLATING_SQUARE = register("space_plating_square", basicMetalBlock());
 
-    public static final RegistryObject<Block> SPACE_PLATING_HATCH = register("space_plating_hatch", () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_TRAPDOOR))
-    {
-        @Override
-        public @NotNull InteractionResult use(@NotNull BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit)
-        {
-            pState = pState.cycle(OPEN);
-            pLevel.setBlock(pPos, pState, 2);
-            if (pState.getValue(WATERLOGGED))
-            {
-                pLevel.scheduleTick(pPos, Fluids.WATER, Fluids.WATER.getTickDelay(pLevel));
-            }
-
-            this.playSound(pPlayer, pLevel, pPos, pState.getValue(OPEN));
-            return InteractionResult.sidedSuccess(pLevel.isClientSide);
-        }
-    });
+    public static final RegistryObject<Block> SPACE_PLATING_HATCH = register("space_plating_hatch", () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_TRAPDOOR), BlockSetType.STONE));
 
     //Concrete variants
     public static final RegistryObject<Block> CONCRETE_PAVER_SLAB = register("concrete_paver_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB)));
@@ -209,10 +183,11 @@ public final class ModBlocks
 
     //Special
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> REINFORCED_GLASS = register("reinforced_glass", () -> new GlassBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+    public static final RegistryObject<Block> REINFORCED_GLASS = register("reinforced_glass", () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS)
             .requiresCorrectToolForDrops()
-            .sound(SoundType.GLASS)
+            .mapColor(MapColor.COLOR_GRAY)
             .noOcclusion()
+            .isValidSpawn(Blocks::never)
             .isRedstoneConductor(Blocks::never)
             .isSuffocating(Blocks::never)
             .isViewBlocking(Blocks::never)
@@ -222,7 +197,7 @@ public final class ModBlocks
     private static RegistryObject<Block> register(String name, Supplier<? extends Block> supplier)
     {
         RegistryObject<Block> block = BLOCKS.register(name, supplier);
-        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
         return block;
     }
 
@@ -253,22 +228,11 @@ public final class ModBlocks
 
     private static Supplier<? extends Block> doorBlock()
     {
-        return () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_DOOR));
+        return () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_DOOR), BlockSetType.IRON);
     }
 
     private static Supplier<? extends Block> openableMetalDoorBlock()
     {
-        return () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_DOOR))
-        {
-            @Override
-            public @NotNull InteractionResult use(@NotNull BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit)
-            {
-                pState = pState.cycle(OPEN);
-                pLevel.setBlock(pPos, pState, 10);
-                pLevel.levelEvent(pPlayer, pState.getValue(OPEN) ? this.getOpenSound() : this.getCloseSound(), pPos, 0);
-                pLevel.gameEvent(pPlayer, this.isOpen(pState) ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, pPos);
-                return InteractionResult.sidedSuccess(pLevel.isClientSide);
-            }
-        };
+        return () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_DOOR), BlockSetType.STONE);
     }
 }

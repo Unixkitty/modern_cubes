@@ -2,7 +2,7 @@ package com.unixkitty.modern_cubes.datagen.model;
 
 import com.unixkitty.modern_cubes.ModBlocks;
 import com.unixkitty.modern_cubes.ModernCubes;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -13,9 +13,9 @@ import java.util.Objects;
 
 public class ModBlockStates extends BlockStateProvider
 {
-    public ModBlockStates(DataGenerator generator, ExistingFileHelper existingFileHelper)
+    public ModBlockStates(PackOutput output, ExistingFileHelper existingFileHelper)
     {
-        super(generator, ModernCubes.MODID, existingFileHelper);
+        super(output, ModernCubes.MODID, existingFileHelper);
     }
 
     @Override

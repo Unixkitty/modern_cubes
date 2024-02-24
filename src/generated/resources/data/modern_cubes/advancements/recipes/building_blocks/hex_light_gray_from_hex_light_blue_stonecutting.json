@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:hex_light_gray_from_hex_light_blue_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

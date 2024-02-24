@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:plating_copper_from_plating_iron_rusted_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

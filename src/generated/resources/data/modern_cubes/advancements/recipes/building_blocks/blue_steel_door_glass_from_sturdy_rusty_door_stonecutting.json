@@ -30,5 +30,6 @@
     "recipes": [
       "modern_cubes:blue_steel_door_glass_from_sturdy_rusty_door_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }
