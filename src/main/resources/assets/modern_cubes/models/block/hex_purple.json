@@ -1,0 +1,9 @@
+{
+  "parent": "modern_cubes:block/emissive_overlay",
+  "render_type": "cutout",
+  "textures": {
+    "particle": "modern_cubes:block/hex_purple",
+    "base": "modern_cubes:block/hex_purple",
+    "emissive": "modern_cubes:block/hex_purple_e"
+  }
+}
