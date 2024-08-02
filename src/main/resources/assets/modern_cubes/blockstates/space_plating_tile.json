@@ -1,0 +1,15 @@
+{
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "empty": "modern_cubes:block/ctm/space_plating_tile_0",
+    "vertical": "modern_cubes:block/ctm/space_plating_tile_1",
+    "horizontal": "modern_cubes:block/ctm/space_plating_tile_2",
+    "center": "modern_cubes:block/ctm/space_plating_tile_3",
+    "particle": "modern_cubes:block/space_plating_tile"
+  },
+  "variants": {
+    "": {
+      "model": "modern_cubes:block/space_plating_tile"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "empty": "modern_cubes:block/chisel/ctm/factory_wireframe_white_0",
+    "vertical": "modern_cubes:block/chisel/ctm/factory_wireframe_white_1",
+    "horizontal": "modern_cubes:block/chisel/ctm/factory_wireframe_white_2",
+    "center": "modern_cubes:block/chisel/ctm/factory_wireframe_white_3",
+    "particle": "modern_cubes:block/chisel/factory/factory_wireframe_white"
+  },
+  "variants": {
+    "": {
+      "model": "modern_cubes:block/chisel/factory/factory_wireframe_white"
+    }
+  }
+}

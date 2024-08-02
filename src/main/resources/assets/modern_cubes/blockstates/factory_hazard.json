@@ -1,0 +1,15 @@
+{
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "empty": "modern_cubes:block/chisel/ctm/factory_hazard_0",
+    "vertical": "modern_cubes:block/chisel/ctm/factory_hazard_1",
+    "horizontal": "modern_cubes:block/chisel/ctm/factory_hazard_2",
+    "center": "modern_cubes:block/chisel/ctm/factory_hazard_3",
+    "particle": "modern_cubes:block/chisel/factory/factory_hazard"
+  },
+  "variants": {
+    "": {
+      "model": "modern_cubes:block/chisel/factory/factory_hazard"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "athena:loader": "athena:pillar",
+  "ctm_textures": {
+    "particle": "modern_cubes:block/chisel/laboratory/laboratory_tile_plain",
+    "self": "modern_cubes:block/chisel/laboratory/laboratory_direction_upright",
+    "top": "modern_cubes:block/chisel/ctm/laboratory_direction_upright_top",
+    "center": "modern_cubes:block/chisel/ctm/laboratory_direction_upright_center",
+    "bottom": "modern_cubes:block/chisel/ctm/laboratory_direction_upright_bottom"
+  },
+  "variants": {
+    "": {
+      "model": "modern_cubes:block/chisel/laboratory/laboratory_direction_upright"
+    }
+  }
+}

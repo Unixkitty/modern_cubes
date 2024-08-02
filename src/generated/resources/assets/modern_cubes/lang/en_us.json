@@ -138,5 +138,17 @@
   "block.modern_cubes.warning_steel_door": "Warning Steel Door",
   "block.modern_cubes.warning_white_steel_door": "Warning White Steel Door",
   "block.modern_cubes.white_steel_door": "White Steel Door",
-  "block.modern_cubes.white_steel_door_glass": "White Steel Door (Glass)"
+  "block.modern_cubes.white_steel_door_glass": "White Steel Door (Glass)",
+  "text.modern_cubes.block_category": "Derived from: ",
+  "text.modern_cubes.block_category.asphalt_plain": "Concrete",
+  "text.modern_cubes.block_category.factory_dots": "Factory",
+  "text.modern_cubes.block_category.hex_black": "Hex",
+  "text.modern_cubes.block_category.laboratory_tile_plain": "Laboratory",
+  "text.modern_cubes.block_category.plating_copper": "Plating",
+  "text.modern_cubes.block_category.sheetmetal_copper": "Sheetmetal",
+  "text.modern_cubes.block_category.soft_plate_white": "Soft Sheetmetal",
+  "text.modern_cubes.block_category.space_plating": "Space Plating",
+  "text.modern_cubes.block_category.steel_door": "Metal Doors",
+  "text.modern_cubes.block_category.tyrian_black": "Tyrian",
+  "text.modern_cubes.main_category_block": "Main block of theme: "
 }

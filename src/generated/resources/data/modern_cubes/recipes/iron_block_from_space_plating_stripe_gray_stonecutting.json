@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "modern_cubes:space_plating_stripe_gray"
-  },
-  "result": "minecraft:iron_block"
-}

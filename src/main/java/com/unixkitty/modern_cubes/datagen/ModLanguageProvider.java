@@ -16,6 +16,20 @@ public class ModLanguageProvider extends LanguageProvider
     @Override
     protected void addTranslations()
     {
+        add("text." + ModernCubes.MODID + ".block_category", "Derived from: ");
+        add("text." + ModernCubes.MODID + ".main_category_block", "Main block of theme: ");
+
+        add("text." + ModernCubes.MODID + ".block_category.laboratory_tile_plain", "Laboratory");
+        add("text." + ModernCubes.MODID + ".block_category.tyrian_black", "Tyrian");
+        add("text." + ModernCubes.MODID + ".block_category.factory_dots", "Factory");
+        add("text." + ModernCubes.MODID + ".block_category.hex_black", "Hex");
+        add("text." + ModernCubes.MODID + ".block_category.space_plating", "Space Plating");
+        add("text." + ModernCubes.MODID + ".block_category.asphalt_plain", "Concrete");
+        add("text." + ModernCubes.MODID + ".block_category.plating_copper", "Plating");
+        add("text." + ModernCubes.MODID + ".block_category.sheetmetal_copper", "Sheetmetal");
+        add("text." + ModernCubes.MODID + ".block_category.soft_plate_white", "Soft Sheetmetal");
+        add("text." + ModernCubes.MODID + ".block_category.steel_door", "Metal Doors");
+
         add(ModBlocks.LABORATORY_STEEL_SMALL_SLAB.get(), "Laboratory Small Steel Slab");
         add(ModBlocks.LABORATORY_STEEL_LARGE.get(), "Laboratory Large Steel");
         add(ModBlocks.LABORATORY_STEEL_SMALL.get(), "Laboratory Small Steel");

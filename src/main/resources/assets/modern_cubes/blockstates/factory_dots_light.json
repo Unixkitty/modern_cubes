@@ -1,0 +1,15 @@
+{
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "empty": "modern_cubes:block/chisel/ctm/factory_dots_light_0",
+    "vertical": "modern_cubes:block/chisel/ctm/factory_dots_light_1",
+    "horizontal": "modern_cubes:block/chisel/ctm/factory_dots_light_2",
+    "center": "modern_cubes:block/chisel/ctm/factory_dots_light_3",
+    "particle": "modern_cubes:block/chisel/factory/factory_dots_light"
+  },
+  "variants": {
+    "": {
+      "model": "modern_cubes:block/chisel/factory/factory_dots_light"
+    }
+  }
+}

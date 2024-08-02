@@ -1,0 +1,15 @@
+{
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "empty": "modern_cubes:block/ctm/reinforced_glass_ctm_0",
+    "vertical": "modern_cubes:block/ctm/reinforced_glass_ctm_1",
+    "horizontal": "modern_cubes:block/ctm/reinforced_glass_ctm_2",
+    "center": "modern_cubes:block/ctm/reinforced_glass_ctm_3",
+    "particle": "modern_cubes:block/reinforced_glass_ctm"
+  },
+  "variants": {
+    "": {
+      "model": "modern_cubes:block/reinforced_glass_ctm"
+    }
+  }
+}

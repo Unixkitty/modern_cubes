@@ -1,7 +1,13 @@
 package com.unixkitty.modern_cubes;
 
+import it.unimi.dsi.fastutil.objects.Object2ObjectArrayMap;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -9,7 +15,10 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.function.Supplier;
 
 public final class ModBlocks
@@ -17,7 +26,10 @@ public final class ModBlocks
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ModernCubes.MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ModernCubes.MODID);
 
+    public static Object2ObjectArrayMap<RegistryObject<Block>, Supplier<Block>> categoryHelpMap = new Object2ObjectArrayMap<>();
+
     //Blocks from Chisel
+    public static final RegistryObject<Block> LABORATORY_TILE_PLAIN = register("laboratory_tile_plain", true, weakMetalBlock());
     public static final RegistryObject<Block> LABORATORY_STEEL_LARGE = register("laboratory_steel_large", weakMetalPillarBlock());
     public static final RegistryObject<Block> LABORATORY_STEEL_SMALL = register("laboratory_steel_small", weakMetalPillarBlock());
     public static final RegistryObject<Block> LABORATORY_STEEL_SMALL_SLAB = register("laboratory_steel_small_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CUT_COPPER_SLAB)));
@@ -26,19 +38,18 @@ public final class ModBlocks
     public static final RegistryObject<Block> LABORATORY_ROUNDEL = register("laboratory_roundel", weakMetalBlock());
     public static final RegistryObject<Block> LABORATORY_SCREEN_CLEAR = register("laboratory_screen_clear", weakMetalBlock());
     public static final RegistryObject<Block> LABORATORY_SCREEN_FUZZY = register("laboratory_screen_fuzzy", weakMetalBlock());
-    public static final RegistryObject<Block> LABORATORY_TILE_PLAIN = register("laboratory_tile_plain", weakMetalBlock());
-    public static final RegistryObject<Block> LABORATORY_TILE_PLAIN_CTM = register("laboratory_tile_plain_ctm", weakMetalBlock());
+    public static final RegistryObject<Block> LABORATORY_TILE_PLAIN_CTM = register("laboratory_tile_plain_ctm", weakMetalBlock()); //ctm
     public static final RegistryObject<Block> LABORATORY_TILES = register("laboratory_tiles", weakMetalBlock());
     public static final RegistryObject<Block> LABORATORY_TILES_CHECKER = register("laboratory_tiles_checker", weakMetalBlock());
     public static final RegistryObject<Block> LABORATORY_TILES_FLOOR = register("laboratory_tiles_floor", weakMetalBlock());
-    public static final RegistryObject<Block> LABORATORY_VENTS = register("laboratory_vents", weakMetalBlock());
-    public static final RegistryObject<Block> LABORATORY_INFOCON = register("laboratory_infocon", weakMetalBlock());
-    public static final RegistryObject<Block> LABORATORY_DIRECTION_UPRIGHT = register("laboratory_direction_upright", weakMetalBlock());
-    public static final RegistryObject<Block> LABORATORY_DIRECTION_DOWNLEFT = register("laboratory_direction_downleft", weakMetalBlock());
+    public static final RegistryObject<Block> LABORATORY_VENTS = register("laboratory_vents", weakMetalPillarBlock());
+    public static final RegistryObject<Block> LABORATORY_INFOCON = register("laboratory_infocon", weakMetalPillarBlock());
+    public static final RegistryObject<Block> LABORATORY_DIRECTION_UPRIGHT = register("laboratory_direction_upright", weakMetalPillarBlock());
+    public static final RegistryObject<Block> LABORATORY_DIRECTION_DOWNLEFT = register("laboratory_direction_downleft", weakMetalPillarBlock());
 
     public static final RegistryObject<Block> TECHNICAL_CAUTION_TAPE = register("technical_caution_tape", weakMetalBlock());
 
-    public static final RegistryObject<Block> TYRIAN_BLACK = register("tyrian_black", weakMetalBlock());
+    public static final RegistryObject<Block> TYRIAN_BLACK = register("tyrian_black", true, weakMetalBlock());
     public static final RegistryObject<Block> TYRIAN_BLACK_ALT = register("tyrian_black_alt", weakMetalBlock());
     public static final RegistryObject<Block> TYRIAN_BLUE_PLATING = register("tyrian_blue_plating", weakMetalBlock());
     public static final RegistryObject<Block> TYRIAN_DENT = register("tyrian_dent", weakMetalBlock());
@@ -46,10 +57,10 @@ public final class ModBlocks
     public static final RegistryObject<Block> TYRIAN_ELABORATE = register("tyrian_elaborate", weakMetalBlock());
     public static final RegistryObject<Block> TYRIAN_PLATE = register("tyrian_plate", weakMetalBlock());
     public static final RegistryObject<Block> TYRIAN_PLATE_TILE = register("tyrian_plate_tile", weakMetalBlock());
-    public static final RegistryObject<Block> TYRIAN_PLATE_TILE_CTM = register("tyrian_plate_tile_ctm", weakMetalBlock());
+    public static final RegistryObject<Block> TYRIAN_PLATE_TILE_CTM = register("tyrian_plate_tile_ctm", weakMetalBlock()); //ctm
     public static final RegistryObject<Block> TYRIAN_TILES = register("tyrian_tiles", weakMetalBlock());
 
-    public static final RegistryObject<Block> FACTORY_DOTS = register("factory_dots", weakMetalBlock());
+    public static final RegistryObject<Block> FACTORY_DOTS = register("factory_dots", true, weakMetalBlock());
     public static final RegistryObject<Block> FACTORY_DOTS_LIGHT = register("factory_dots_light", weakMetalBlock());
     public static final RegistryObject<Block> FACTORY_HAZARD = register("factory_hazard", weakMetalBlock());
     public static final RegistryObject<Block> FACTORY_HAZARD_ORANGE = register("factory_hazard_orange", weakMetalBlock());
@@ -58,7 +69,7 @@ public final class ModBlocks
     public static final RegistryObject<Block> FACTORY_WIREFRAME_WHITE = register("factory_wireframe_white", weakMetalBlock());
 
     //Hex
-    public static final RegistryObject<Block> HEX_BLACK = register("hex_black", weakMetalBlock());
+    public static final RegistryObject<Block> HEX_BLACK = register("hex_black", true, weakMetalBlock());
     public static final RegistryObject<Block> HEX_BLUE = register("hex_blue", weakMetalBlock());
     public static final RegistryObject<Block> HEX_BROWN = register("hex_brown", weakMetalBlock());
     public static final RegistryObject<Block> HEX_CYAN = register("hex_cyan", weakMetalBlock());
@@ -76,6 +87,10 @@ public final class ModBlocks
     public static final RegistryObject<Block> HEX_YELLOW = register("hex_yellow", weakMetalBlock());
 
     //Space plating
+    public static final RegistryObject<Block> SPACE_PLATING = register("space_plating", true, basicMetalBlock());
+    public static final RegistryObject<Block> SPACE_PLATING_TILE = register("space_plating_tile", basicMetalBlock());
+    public static final RegistryObject<Block> SPACE_PLATING_SQUARE = register("space_plating_square", basicMetalBlock());
+
     public static final RegistryObject<Block> SPACE_PLATING_INSET = register("space_plating_inset", weakMetalPillarBlock());
     public static final RegistryObject<Block> SPACE_PLATING_RIVETS = register("space_plating_rivets", weakMetalPillarBlock());
     public static final RegistryObject<Block> SPACE_PLATING_STRIPE_BLACK = register("space_plating_stripe_black", weakMetalPillarBlock());
@@ -95,11 +110,7 @@ public final class ModBlocks
     public static final RegistryObject<Block> SPACE_PLATING_STRIPE_WHITE = register("space_plating_stripe_white", weakMetalPillarBlock());
     public static final RegistryObject<Block> SPACE_PLATING_STRIPE_YELLOW = register("space_plating_stripe_yellow", weakMetalPillarBlock());
     public static final RegistryObject<Block> SPACE_PLATING_VENT = register("space_plating_vent", weakMetalPillarBlock());
-    public static final RegistryObject<Block> SPACE_PLATING_VENT_CTM = register("space_plating_vent_ctm", basicMetalBlock());
-
-    public static final RegistryObject<Block> SPACE_PLATING_TILE = register("space_plating_tile", basicMetalBlock());
-    public static final RegistryObject<Block> SPACE_PLATING = register("space_plating", basicMetalBlock());
-    public static final RegistryObject<Block> SPACE_PLATING_SQUARE = register("space_plating_square", basicMetalBlock());
+    public static final RegistryObject<Block> SPACE_PLATING_VENT_CTM = register("space_plating_vent_ctm", weakMetalPillarBlock()); //ctm
 
     public static final RegistryObject<Block> SPACE_PLATING_HATCH = register("space_plating_hatch", () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_TRAPDOOR), BlockSetType.STONE));
 
@@ -107,7 +118,7 @@ public final class ModBlocks
     public static final RegistryObject<Block> CONCRETE_PAVER_SLAB = register("concrete_paver_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB)));
     public static final RegistryObject<Block> CONCRETE_SIMPLE_TILE_SLAB = register("concrete_simple_tile_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB)));
 
-    public static final RegistryObject<Block> ASPHALT_PLAIN = register("asphalt_plain", concreteBlock());
+    public static final RegistryObject<Block> ASPHALT_PLAIN = register("asphalt_plain", true, concreteBlock());
     public static final RegistryObject<Block> CONCRETE_PAVER = register("concrete_paver", concreteBlock());
     public static final RegistryObject<Block> CONCRETE_PLAIN = register("concrete_plain", concreteBlock());
     public static final RegistryObject<Block> CONCRETE_ASPHALT = register("concrete_asphalt", concreteBlock());
@@ -117,12 +128,12 @@ public final class ModBlocks
     public static final RegistryObject<Block> CONCRETE_SIMPLE_TILE = register("concrete_simple_tile", concreteBlock());
 
     //Basic plating
+    public static final RegistryObject<Block> PLATING_COPPER = register("plating_copper", true, sheetMetalBlock());
     public static final RegistryObject<Block> CEILING_PLATE = register("ceiling_plate", sheetMetalBlock());
     public static final RegistryObject<Block> CEILING_TILE = register("ceiling_tile", sheetMetalBlock());
     public static final RegistryObject<Block> FLOOR_PLATE = register("floor_plate", sheetMetalBlock());
     public static final RegistryObject<Block> FLOOR_PLATE_DARK = register("floor_plate_dark", sheetMetalBlock());
     public static final RegistryObject<Block> FLOOR_PLATE_LIGHT = register("floor_plate_light", sheetMetalBlock());
-    public static final RegistryObject<Block> PLATING_COPPER = register("plating_copper", sheetMetalBlock());
     public static final RegistryObject<Block> PLATING_IRON = register("plating_iron", sheetMetalBlock());
     public static final RegistryObject<Block> PLATING_IRON_RUSTED = register("plating_iron_rusted", sheetMetalBlock());
     public static final RegistryObject<Block> PLATING_LEAD = register("plating_lead", sheetMetalBlock());
@@ -130,8 +141,8 @@ public final class ModBlocks
     public static final RegistryObject<Block> PLATING_TITANIUM_STEEL = register("plating_titanium_steel", sheetMetalBlock());
 
     //Sheetmetal
+    public static final RegistryObject<Block> SHEETMETAL_COPPER = register("sheetmetal_copper", true, sheetMetalBlock());
     public static final RegistryObject<Block> SHEETMETAL_ALUMINUM = register("sheetmetal_aluminum", sheetMetalBlock());
-    public static final RegistryObject<Block> SHEETMETAL_COPPER = register("sheetmetal_copper", sheetMetalBlock());
     public static final RegistryObject<Block> SHEETMETAL_GOLD = register("sheetmetal_gold", sheetMetalBlock());
     public static final RegistryObject<Block> SHEETMETAL_IRON = register("sheetmetal_iron", sheetMetalBlock());
     public static final RegistryObject<Block> SHEETMETAL_LEAD = register("sheetmetal_lead", sheetMetalBlock());
@@ -143,7 +154,7 @@ public final class ModBlocks
     public static final RegistryObject<Block> SHEETMETAL_IRON_ALT = register("sheetmetal_iron_alt", sheetMetalBlock());
 
     //Soft plate
-    public static final RegistryObject<Block> SOFT_PLATE_WHITE = register("soft_plate_white", sheetMetalBlock());
+    public static final RegistryObject<Block> SOFT_PLATE_WHITE = register("soft_plate_white", true, sheetMetalBlock());
     public static final RegistryObject<Block> SOFT_PLATE_ORANGE = register("soft_plate_orange", sheetMetalBlock());
     public static final RegistryObject<Block> SOFT_PLATE_MAGENTA = register("soft_plate_magenta", sheetMetalBlock());
     public static final RegistryObject<Block> SOFT_PLATE_LIGHT_BLUE = register("soft_plate_light_blue", sheetMetalBlock());
@@ -161,7 +172,7 @@ public final class ModBlocks
     public static final RegistryObject<Block> SOFT_PLATE_BLACK = register("soft_plate_black", sheetMetalBlock());
 
     //Doors
-    public static final RegistryObject<Block> STEEL_DOOR = register("steel_door", doorBlock());
+    public static final RegistryObject<Block> STEEL_DOOR = register("steel_door", true, doorBlock());
     public static final RegistryObject<Block> STRONG_DOOR = register("strong_door", doorBlock());
     public static final RegistryObject<Block> STURDY_RUSTY_DOOR = register("sturdy_rusty_door", doorBlock());
     public static final RegistryObject<Block> STURDY_STEEL_DOOR = register("sturdy_steel_door", doorBlock());
@@ -192,12 +203,79 @@ public final class ModBlocks
             .isSuffocating(Blocks::never)
             .isViewBlocking(Blocks::never)
             .strength(Blocks.IRON_BLOCK.defaultDestroyTime(), Blocks.OBSIDIAN.getExplosionResistance())));
-    public static final RegistryObject<Block> REINFORCED_GLASS_CTM = register("reinforced_glass_ctm", () -> new GlassBlock(BlockBehaviour.Properties.copy(REINFORCED_GLASS.get())));
+    public static final RegistryObject<Block> REINFORCED_GLASS_CTM = register("reinforced_glass_ctm", () -> new GlassBlock(BlockBehaviour.Properties.copy(REINFORCED_GLASS.get()))); //ctm
 
     private static RegistryObject<Block> register(String name, Supplier<? extends Block> supplier)
     {
+        return register(name, false, supplier);
+    }
+
+    private static RegistryObject<Block> register(String name, boolean mainCategoryBlock, Supplier<? extends Block> supplier)
+    {
         RegistryObject<Block> block = BLOCKS.register(name, supplier);
-        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+
+        Supplier<Block> categoryBlock = null;
+
+        //We do this map here for consistent tooltips and recipe sourcing during datagen
+        if (categoryHelpMap != null && !mainCategoryBlock)
+        {
+            if (name.contains("_") && !name.contains("_slab") && !name.contains("_hatch"))
+            {
+                categoryBlock = switch (name.substring(0, name.indexOf("_")))
+                {
+                    case "laboratory" -> LABORATORY_TILE_PLAIN;
+                    case "tyrian" -> TYRIAN_BLACK;
+                    case "factory" -> FACTORY_DOTS;
+                    case "hex" -> HEX_BLACK;
+                    case "space" -> SPACE_PLATING;
+                    case "concrete" -> ASPHALT_PLAIN;
+                    case "plating" -> PLATING_COPPER;
+                    case "sheetmetal" -> SHEETMETAL_COPPER;
+                    case "soft" -> SOFT_PLATE_WHITE;
+                    default -> switch (name)
+                    {
+                        case "ceiling_plate", "floor_plate_light", "ceiling_tile", "floor_plate", "floor_plate_dark" ->
+                                PLATING_COPPER;
+                        default -> name.contains("_door") ? STEEL_DOOR : null;
+                    };
+                };
+
+                if (categoryBlock != null)
+                {
+                    categoryHelpMap.put(block, categoryBlock);
+                }
+            }
+        }
+
+        //Why is this needed? "effectively final"
+        final Supplier<Block> finalCategoryBlock = categoryBlock;
+
+        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties())
+        {
+            @Override
+            public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, @NotNull List<Component> pTooltip, @NotNull TooltipFlag pFlag)
+            {
+                if (mainCategoryBlock)
+                {
+                    addToolTip(pTooltip, mainCategoryBlock, this);
+                }
+                else if (finalCategoryBlock != null)
+                {
+                    addToolTip(pTooltip, false, finalCategoryBlock.get().asItem());
+                }
+
+                super.appendHoverText(pStack, pLevel, pTooltip, pFlag);
+            }
+
+            private static void addToolTip(@NotNull List<Component> toolTipList, boolean main, Item descriptorItem)
+            {
+                toolTipList.add(
+                        Component.translatable("text." + ModernCubes.MODID + "." + (main ? "main_category_block" : "block_category")).withStyle(ChatFormatting.DARK_GRAY)
+                                .append((main ? Component.translatable("text." + ModernCubes.MODID + ".block_category." + descriptorItem.toString().toLowerCase()) : descriptorItem.getDescription().copy()).withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.BOLD))
+                );
+            }
+        });
+
         return block;
     }
 

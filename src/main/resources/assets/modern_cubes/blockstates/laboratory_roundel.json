@@ -1,0 +1,15 @@
+{
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "empty": "modern_cubes:block/chisel/ctm/laboratory_roundel_0",
+    "vertical": "modern_cubes:block/chisel/ctm/laboratory_roundel_1",
+    "horizontal": "modern_cubes:block/chisel/ctm/laboratory_roundel_2",
+    "center": "modern_cubes:block/chisel/ctm/laboratory_roundel_3",
+    "particle": "modern_cubes:block/chisel/laboratory/laboratory_roundel"
+  },
+  "variants": {
+    "": {
+      "model": "modern_cubes:block/chisel/laboratory/laboratory_roundel"
+    }
+  }
+}

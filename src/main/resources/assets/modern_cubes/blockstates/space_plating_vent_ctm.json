@@ -1,0 +1,15 @@
+{
+  "athena:loader": "athena:pillar",
+  "ctm_textures": {
+    "particle": "modern_cubes:block/space_plating_tile",
+    "self": "modern_cubes:block/space_plating_vent_ctm",
+    "top": "modern_cubes:block/ctm/space_plating_vent_ctm_top",
+    "center": "modern_cubes:block/ctm/space_plating_vent_ctm_center",
+    "bottom": "modern_cubes:block/ctm/space_plating_vent_ctm_bottom"
+  },
+  "variants": {
+    "": {
+      "model": "modern_cubes:block/space_plating_vent_ctm"
+    }
+  }
+}
